@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --cor-background:rgb(26, 26, 26);;
+    --cor-fonte: rgb(41, 128, 185);
+    --espacamento: 10px;
+    --cor--fonte--tema--claro: rgb(0, 102, 204);
+  }
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: var(--cor-background);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--cor-fonte);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: var(--cor-fonte);
+    border-bottom: 3px solid var(--cor-fonte);
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid var(--cor-fonte);
+        border-bottom: 3px solid var(--cor-fonte);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid var(--cor-fonte);
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: var(--cor-background);
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color:rgb(41, 128, 185)
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 450px;
+    border-radius: 10%;
+    box-shadow: 0 0 25px solid var(--cor-fonte);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--cor-fonte);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: var(--cor-fonte);
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0  0 25px #b74b4b;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--cor-fonte);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid var(--cor-fonte);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: var(--cor-fonte);
+    color: black;
+    box-shadow: 0 0 25px var(--cor-fonte);
+}
+
+.typing-text{
+    margin-top: 40px;
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: var(--cor-fonte);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: var(--cor-background);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+
+
+
+
+/* section portfólio */
+
+.home-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(236, 236, 236);
+}
+
+
+
+.projects {
+    background-color: rgb(236, 236, 236);
+    padding: 8rem 9% 5rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .projects-title {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: var(--cor-fonte);
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+  
+  .project-card {
+    background-color: #111;
+    border: 2px solid var(--cor-fonte);
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--cor-fonte);
+  }
+  
+  .project-title {
+    font-size: 2.4rem;
+    color: var(--cor-fonte);
+    margin-bottom: 1rem;
+  }
+  
+  .project-desc {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tech {
+    font-size: 1.3rem;
+    color: #888;
+    margin-bottom: 2rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid var(--cor-fonte);
+    border-radius: 3rem;
+    color: var(--cor-fonte);
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: var(--cor-fonte);
+    color: black;
+    box-shadow: 0 0 15px var(--cor-fonte);
+  }
+  
+
+
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid var(--cor-fonte);
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "Youtuber";
+    }
+    81%, 100%{
+        content: "Script Writer";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
