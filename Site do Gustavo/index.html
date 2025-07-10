@@ -1,80 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="#" class="logo">Gustavo</a>
+  <header>
+    <a href="#" class="logo">Gustavo</a>
+    <nav>
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#projects" class="nav-link">Services</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
-        </nav> 
-    </header>
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="main.png" alt="" />
+    </div>
+    <div class="home-content">
+      <h1>Olá! Sou o <span>Gustavo Freitas</span></h1>
+      <h3 class="typing-text">I'm a <span></span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="#" class="btn">Hire me</a>
+    </div>
+  </section>
 
-    <section class="home">
-        <div class="home-img">
-            <img src="main.png" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Olá! Sou  o <span>Gustavo Freitas</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <a href="#" class="btn">Hire me</a>
-        </div>
-    </section>
+  <section class="projects" id="projects">
+    <h2 class="projects-title">Projetos no GitHub</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3 class="project-title">Fast-Food Console (Java)</h3>
+        <p class="project-desc">Sistema de pedidos com padrão Facade e interação via terminal.</p>
+        <p class="project-tech">Java · OOP · Design Patterns</p>
+        <a href="https://github.com/seuusuario/fastfood-facade" class="project-link" target="_blank">Ver no GitHub</a>
+      </div>
 
-    <section class="home-projects">
-        <section class="projects">
-            <h2 class="projects-title">Projetos no GitHub</h2>
-            <div class="projects-container">
-              <div class="project-card">
-                <h3 class="project-title">Fast-Food Console (Java)</h3>
-                <p class="project-desc">
-                  Sistema de pedidos com padrão Facade e interação via terminal.
-                </p>
-                <p class="project-tech">Java · OOP · Design Patterns</p>
-                <a href="https://github.com/seuusuario/fastfood-facade" class="project-link" target="_blank">Ver no GitHub</a>
-              </div>
-          
-              <div class="project-card">
-                <h3 class="project-title">Testes Automatizados com Selenium</h3>
-                <p class="project-desc">
-                  Scripts automatizados para testes de interface com Selenium IDE e Java.
-                </p>
-                <p class="project-tech">Selenium · Java · QA</p>
-                <a href="https://github.com/seuusuario/selenium-tests" class="project-link" target="_blank">Ver no GitHub</a>
-              </div>
-          
-              <div class="project-card">
-                <h3 class="project-title">Site Santos FC</h3>
-                <p class="project-desc">
-                  Página estática construída apenas com HTML e CSS puro.
-                </p>
-                <p class="project-tech">HTML · CSS</p>
-                <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Ver no GitHub</a>
-              </div>
-            </div>
-          </section>
-          
-    </section>
+      <div class="project-card">
+        <h3 class="project-title">Testes Automatizados com Selenium</h3>
+        <p class="project-desc">Scripts automatizados para testes de interface com Selenium IDE e Java.</p>
+        <p class="project-tech">Selenium · Java · QA</p>
+        <a href="https://github.com/seuusuario/selenium-tests" class="project-link" target="_blank">Ver no GitHub</a>
+      </div>
 
+      <div class="project-card">
+        <h3 class="project-title">Site Santos FC</h3>
+        <p class="project-desc">Página estática construída apenas com HTML e CSS puro.</p>
+        <p class="project-tech">HTML · CSS</p>
+        <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Ver no GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>Conteúdo da seção de habilidades.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>Conteúdo da seção de formação acadêmica.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>Conteúdo da seção de experiências profissionais.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Conteúdo da seção de contato.</p>
+  </section>
 </body>
+
+<script src="javascript.js"></script>
 </html>
