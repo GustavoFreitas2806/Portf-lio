@@ -1,11 +1,14 @@
 // Espera a página carregar completamente
 window.addEventListener('DOMContentLoaded', function () {
-  
+
     // Pega todos os links da navbar
     const links = document.querySelectorAll('nav a');
   
     // Pega todas as seções com id
     const sections = document.querySelectorAll('section[id]');
+  
+    // Pega o body para manipular classes globais
+    const body = document.body;
   
     // Quando o usuário rolar a página
     window.addEventListener('scroll', function () {
@@ -31,6 +34,14 @@ window.addEventListener('DOMContentLoaded', function () {
           const currentLink = document.querySelector('nav a[href="#' + id + '"]');
           if (currentLink) {
             currentLink.classList.add('active');
+          }
+  
+          // Altera a cor principal de acordo com a seção atual
+          // Se não for a seção "home", ativa a cor dourada
+          if (id !== 'home') {
+            body.classList.add('cor-dourada');
+          } else {
+            body.classList.remove('cor-dourada');
           }
         }
       });

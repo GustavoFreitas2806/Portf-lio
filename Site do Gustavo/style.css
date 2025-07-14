@@ -341,6 +341,12 @@ span{
     color: black;
     box-shadow: 0 0 15px var(--cor-fonte);
   }
+
+  /* Quando a seção visível for diferente de home, usa cor dourada */
+body.cor-dourada {
+    --cor-fonte: var(--cor-fonte-dourado);
+  }
+  
   
 
 
