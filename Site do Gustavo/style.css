@@ -13,8 +13,14 @@
 :root {
     --cor-background:rgb(26, 26, 26);;
     --cor-fonte: rgb(41, 128, 185);
+    --cor-fonte-dourado: hsl(45, 54%, 58%);
     --espacamento: 10px;
     --cor--fonte--tema--claro: rgb(0, 102, 204);
+    --cor--gradiente: linear-gradient(
+        to bottom right, 
+        hsl(0, 4%, 5%) 1%, 
+        hsl(0, 0%, 9%) 99%
+      );;
   }
 
 html{
@@ -245,21 +251,38 @@ span{
     margin: 100px;
 }
 
-
-
 .projects {
     background-color: var(--cor-background);
     padding: 8rem 9% 5rem;
     color: white;
     text-align: center;
     border-radius: 40px 40px 40px 40px;
-
+    display: flex;
+    justify-content: center;
   }
-  
+
+  .projects-side-bar-left {
+    border-radius: 20px;
+    width: 40%;
+    padding: 30px;
+  }
+
+  .projects-side-bar-right {
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 20px;
+    padding: 30px;
+  }
+  .projects h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+  }
+
   .projects-title {
     font-size: 4rem;
     margin-bottom: 4rem;
-    color: var(--cor-fonte);
+    color: var(--cor-fonte-dourado);
   }
   
   .projects-container {
@@ -269,8 +292,12 @@ span{
   }
   
   .project-card {
-    background-color: #111;
-    border: 2px solid var(--cor-fonte);
+    background: linear-gradient(
+        to bottom right, 
+        hsl(0, 0%, 4%) 3%, 
+        hsl(0, 0%, 12%) 97%
+      );;
+    border: 2px solid var(--cor-fonte-dourado);
     border-radius: 1.5rem;
     padding: 3rem 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -283,7 +310,7 @@ span{
   
   .project-title {
     font-size: 2.4rem;
-    color: var(--cor-fonte);
+    color: var(--cor-fonte-dourado);
     margin-bottom: 1rem;
   }
   
@@ -302,9 +329,9 @@ span{
   .project-link {
     display: inline-block;
     padding: 1rem 2rem;
-    border: 2px solid var(--cor-fonte);
+    border: 2px solid var(--cor-fonte-dourado);
     border-radius: 3rem;
-    color: var(--cor-fonte);
+    color: var(--cor-fonte-dourado);
     font-weight: 600;
     transition: 0.3s ease;
   }
@@ -326,19 +353,19 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content: "Web Developer";
+        content: "Analista de Testes";
     }
     21%, 40%{
-        content: "Developer";
+        content: "Desenvolvedor";
     }
     41%, 60%{
-        content: "Web Designer";
+        content: "Entusiasta por Tecnologia";
     }
     61%, 80%{
-        content: "Youtuber";
+        content: "Estudante de ADS";
     }
     81%, 100%{
-        content: "Script Writer";
+        content: "Técnico em DS";
     }
 }
 
@@ -365,6 +392,31 @@ span{
     .home-img img{
         width: 70vw;
         margin-top: 4rem;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects .project-card {
+        width: 100%;
+        margin-left: 0;
+        max-width: 500px;
+    }
+
+    .projects-side-bar-right{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .projects-side-bar-left{
+        width: 100%;
+        margin-left: 0;
     }
 }
 
