@@ -267,6 +267,46 @@ span{
     padding: 30px;
   }
 
+  .projects-side-bar-left img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: var(--cor-background);
+  }
+
+  .projects-side-bar-left h2 {
+    font-size: 2rem;
+    color: var(--cor-fonte-dourado);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: var(--cor-background);
+    border-radius: 30px;
+    width: 100%;
+  }
+  
+
+.projects-side-bar-left p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 1.6rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 8px 0;
+    margin-top: 15%;
+
+}
+
+.projects-side-bar-left i {
+    min-width: 24px; /* Alinhamento fixo para ícones */
+    text-align: center;
+    font-size: 3rem;
+    color: var(--cor-fonte-dourado);
+}
+
   .projects-side-bar-right {
     margin-left: 5%;
     width: 90%;
