@@ -114,6 +114,10 @@ section{
     padding: 5rem 9% 5rem;
 }
 
+#skills{
+    margin-top: 10px;
+}
+
 .home{
     display: flex;
     justify-content: center;
@@ -297,7 +301,7 @@ span{
     max-width: 300px;
     margin: 8px 0;
     margin-top: 15%;
-
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .projects-side-bar-left i {
@@ -308,7 +312,7 @@ span{
 }
 
   .projects-side-bar-right {
-    margin-left: 5%;
+    margin-left: 1.5%;
     width: 90%;
     border-radius: 20px;
     padding: 30px;
@@ -318,6 +322,23 @@ span{
     font-weight: 700;
     color: white;
   }
+
+  .coluna-maior {
+  width: 90%;
+  margin-left: 1.5%;
+  padding: 30px;
+  background: var(--cor--gradiente);
+  border-radius: 20px;
+}
+
+.coluna-menor {
+  width: 40%;
+  margin-left: 5%;
+  padding: 30px;
+  background: var(--cor--gradiente);
+  border-radius: 20px;
+}
+
 
   .projects-title {
     font-size: 4rem;
@@ -332,11 +353,7 @@ span{
   }
   
   .project-card {
-    background: linear-gradient(
-        to bottom right, 
-        hsl(0, 0%, 4%) 3%, 
-        hsl(0, 0%, 12%) 97%
-      );;
+    background: var(--cor--gradiente);
     border: 2px solid var(--cor-fonte-dourado);
     border-radius: 1.5rem;
     padding: 3rem 2rem;
@@ -386,8 +403,66 @@ span{
 body.cor-dourada {
     --cor-fonte: var(--cor-fonte-dourado);
   }
+
+  .projects-layout.inverso {
+  flex-direction: row-reverse;
+}
   
+
+/* MODAL */
+ .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none; /* ainda controlado via JS */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
   
+  /* Transição de entrada */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal-overlay.show .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.modal-gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 
 
 

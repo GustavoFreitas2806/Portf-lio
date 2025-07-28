@@ -14,7 +14,7 @@
     <a href="#" class="logo">Gustavo Freitas</a>
     <nav>
       <a href="#home" class="nav-link active">Inicial</a>
-      <a href="#projects" class="nav-link">Projetos</a>
+      <a href="#projects" class="nav-link">Sobre mim</a>
       <a href="#skills" class="nav-link">Skills</a>
       <a href="#education" class="nav-link">Education</a>
       <a href="#experience" class="nav-link">Experience</a>
@@ -43,7 +43,7 @@
   <hr>
   <section class="projects" id="projects">
     
-    <div class="projects-side-bar-left" style="background: var(--cor--gradiente)">
+    <div class="projects-side-bar-left coluna-menor" style="background: var(--cor--gradiente)">
       <img src="img/euIOS.png" alt="Gustavo Freitas IOS" />
       <h1>Gustavo Freitas</h1>
       <h2>Contatos</h2>
@@ -55,53 +55,87 @@
     </div>
 
 
-    <div class="projects-side-bar-right" style="background: var(--cor--gradiente)">
+    <div class="projects-side-bar-right coluna-maior" style="background: var(--cor--gradiente)">
     <h1>Quem eu sou?</h1>
     <h2 class="projects-title">Conheça mais:</h2>
 
     <div class="projects-container">
       <div class="project-card">
+        <img src="img/alocacao-de-recursos.png" alt="Selenium" style="width: 50px">
+        <h3 class="project-title">Analista de Testes</h3>
+        <p class="project-desc">Realizo testes e automações, visando garantir a qualidade do produto</p>
+        <p class="project-tech">Java · Selenium · WebDriver · JUnit</p>
+        <a class="project-link open-modal-btn">Saiba mais</a>
+      </div>
 
-        <h3 class="project-title">Fast-Food Console (Java)</h3>
-        <p class="project-desc">Sistema de pedidos com padrão Facade e interação via terminal.</p>
-        <p class="project-tech">Java · OOP · Design Patterns</p>
-        <a href="https://github.com/seuusuario/fastfood-facade" class="project-link" target="_blank">Ver no GitHub</a>
+      
+<!-- Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Portfólio: Analista de Testes</h2>
+    
+    <div class="modal-gallery">
+      <h1 style="color: black;">teste</h1>
+      <img src="img/960px-Selenium_Logo.png" alt="Tela de Login Automatizada">
+
+      <h2>teste</h2>
+      <img src="img/pngwing.com (4).png" alt="Execução de Testes no Console">
+      <img src="img/portfolio3.png" alt="Relatório de Testes com JUnit">
+    </div>
+  </div>
+</div>
+
+
+      <div class="project-card">
+
+        <img src="img/pngwing.com (4).png" alt="Desenvolvedor" style="width: 50px">
+        <h3 class="project-title">Desenvolvedor</h3>
+        <p class="project-desc">Desenvolvo sites e aplicativos, construindo projetos tecnológicos e de valor</p>
+        <p class="project-tech">Java · SpringBoot · JavaScript</p>
+        <a href="https://github.com/seuusuario/selenium-tests" class="project-link" target="_blank">Saiba mais</a>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">Testes Automatizados com Selenium</h3>
-        <p class="project-desc">Scripts automatizados para testes de interface com Selenium IDE e Java.</p>
-        <p class="project-tech">Selenium · Java · QA</p>
-        <a href="https://github.com/seuusuario/selenium-tests" class="project-link" target="_blank">Ver no GitHub</a>
-      </div>
 
-      <div class="project-card">
-        <h3 class="project-title">Site Santos FC</h3>
-        <p class="project-desc">Página estática construída apenas com HTML e CSS puro.</p>
+        <img src="img/programador.png" alt="Estudante do ADS" style="width: 50px">
+        <h3 class="project-title">Estudante de ADS</h3>
+        <p class="project-desc">Estudo na FATEC, no último ano. Sou formado em Técnico em Desenvolvimento de Sistemas.</p>
         <p class="project-tech">HTML · CSS</p>
-        <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Ver no GitHub</a>
+        <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Saiba mais</a>
+      </div>
+
+      
+      <div class="project-card">
+        <img src="img/suporte-tecnico (1).png" alt="Analista de HelpDesk" style="width: 50px">
+        <h3 class="project-title">Analista de HelpDesk</h3>
+        <p class="project-desc">Trabalho atualmente respondendo chamados, garantindo a qualidade da experiência do cliente</p>
+        <p class="project-tech">HTML · CSS</p>
+        <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Saiba mais</a>
       </div>
 
 
     </div>
 
     </div>
+
+    <!-- <div class="textoSobreMim">
+      <p>teste</p>
+    </div> -->
 
   </section>
 
-  <div class="projects-side-bar-left" style="background: var(--cor--gradiente)">
+  <!-- Skills Section (invertido) -->
+  <section class="projects" id="skills">
 
-    <h1>nav bar esquerda</h1>
-  </div>
+    <div class="projects-side-bar-left coluna-menor" style="background: var(--cor--gradiente); width: 90%; margin-left: 0; padding: 30px;">
+      <h2>Skills</h2>
+      <p>Conteúdo da seção de habilidades.</p>
+    </div>
 
-
-  <div class="projects-side-bar-right" style="background: var(--cor--gradiente)">
-    <h1>nav bar direita</h1>
-  </div>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <p>Conteúdo da seção de habilidades.</p>
+    <div class="projects-side-bar-right coluna-maior" style="background: var(--cor--gradiente); width: 40%; margin-left: 5%; padding: 30px;">
+      <!-- Espaço para conteúdo extra -->
+    </div>
   </section>
 
   <section id="education">

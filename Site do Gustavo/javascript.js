@@ -47,4 +47,39 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+
+  // MODAL
+  const openBtn = document.querySelector(".open-modal-btn");
+  const modal = document.getElementById("modal");
+  const closeBtn = document.querySelector(".close-modal");
+
+  openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "flex";
+
+    // Força o reflow para que a transição seja ativada corretamente
+    void modal.offsetWidth;
+
+    modal.classList.add("show");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+
+    // Aguarda o tempo da animação antes de esconder completamente
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300); // corresponde ao tempo de transition no CSS
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 300);
+    }
+  });
+
   
