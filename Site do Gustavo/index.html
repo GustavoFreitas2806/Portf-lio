@@ -65,71 +65,96 @@
         <h3 class="project-title">Analista de Testes</h3>
         <p class="project-desc">Realizo testes e automações, visando garantir a qualidade do produto</p>
         <p class="project-tech">Java · Selenium · WebDriver · JUnit</p>
-        <a class="project-link open-modal-btn">Saiba mais</a>
+        <a href="#" class="project-link open-modal" data-modal-target="#modal">Saiba mais</a>
       </div>
 
-      
-<!-- Modal -->
-<div id="modal" class="modal-overlay">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h1 style="color: black;">Portfólio: Analista de Testes</h2>
-    
-    
-      <img src="img/alocacao-de-recursos.png" alt="Relatório de Testes com JUnit">
-  </div>
-</div>
-
-
       <div class="project-card">
-
         <img src="img/pngwing.com (4).png" alt="Desenvolvedor" style="width: 50px">
         <h3 class="project-title">Desenvolvedor</h3>
         <p class="project-desc">Desenvolvo sites e aplicativos, construindo projetos tecnológicos e de valor</p>
         <p class="project-tech">Java · SpringBoot · JavaScript</p>
-        <a href="https://github.com/seuusuario/selenium-tests" class="project-link" target="_blank">Saiba mais</a>
+        <a href="#" class="project-link open-modal" data-modal-target="#modal-dev">Saiba mais</a>
       </div>
 
       <div class="project-card">
-
         <img src="img/programador.png" alt="Estudante do ADS" style="width: 50px">
         <h3 class="project-title">Estudante de ADS</h3>
         <p class="project-desc">Estudo na FATEC, no último ano. Sou formado em Técnico em Desenvolvimento de Sistemas.</p>
         <p class="project-tech">HTML · CSS</p>
-        <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Saiba mais</a>
+        <a href="#" class="project-link open-modal" data-modal-target="#modal-student">Saiba mais</a>
       </div>
 
-      
       <div class="project-card">
         <img src="img/suporte-tecnico (1).png" alt="Analista de HelpDesk" style="width: 50px">
         <h3 class="project-title">Analista de HelpDesk</h3>
         <p class="project-desc">Trabalho atualmente respondendo chamados, garantindo a qualidade da experiência do cliente</p>
         <p class="project-tech">HTML · CSS</p>
-        <a href="https://github.com/seuusuario/santosfc-site" class="project-link" target="_blank">Saiba mais</a>
+        <a href="#" class="project-link open-modal" data-modal-target="#modal-helpdesk">Saiba mais</a>
       </div>
-
-
     </div>
-
     </div>
-
-    <!-- <div class="textoSobreMim">
-      <p>teste</p>
-    </div> -->
-
   </section>
 
-  <!-- Skills Section (invertido) -->
-  <section class="projects" id="skills">
+  <div id="modal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h1 style="color: black;">Portfólio: Analista de Testes</h1>
+      <p style="color: black; font-size: 1.6rem;">
+        Como Analista de Testes, foco em garantir a qualidade do software através de testes manuais e automação. Utilizo ferramentas como Selenium e JUnit para criar testes robustos e confiáveis.
+      </p>
+      <div class="modal-gallery">
+        <img src="img/alocacao-de-recursos.png" alt="Relatório de Testes com JUnit">
+      </div>
+    </div>
+  </div>
 
+  <div id="modal-dev" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h1 style="color: black;">Portfólio: Desenvolvedor</h1>
+      <p style="color: black; font-size: 1.6rem;">
+        Aqui você pode detalhar seus projetos de desenvolvimento, as tecnologias que domina como Java e SpringBoot, e mostrar exemplos de código ou links para repositórios.
+      </p>
+      <div class="modal-gallery">
+        <img src="img/pngwing.com (4).png" alt="Desenvolvimento">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-student" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h1 style="color: black;">Portfólio: Estudante de ADS</h1>
+      <p style="color: black; font-size: 1.6rem;">
+        Descreva sua jornada acadêmica, projetos da faculdade, e o conhecimento adquirido como Técnico em Desenvolvimento de Sistemas.
+      </p>
+      <div class="modal-gallery">
+        <img src="img/programador.png" alt="Estudante">
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-helpdesk" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h1 style="color: black;">Portfólio: Analista de HelpDesk</h1>
+      <p style="color: black; font-size: 1.6rem;">
+        Explique sua experiência com suporte ao cliente, resolução de problemas e como isso contribui para a qualidade da experiência do usuário.
+      </p>
+      <div class="modal-gallery">
+        <img src="img/suporte-tecnico (1).png" alt="HelpDesk">
+      </div>
+    </div>
+  </div>
+
+
+  <section class="projects" id="skills">
     <div class="projects-side-bar-left coluna-menor" style="background: var(--cor--gradiente); width: 90%; margin-left: 0; padding: 30px;">
       <h2>Skills</h2>
       <p>Conteúdo da seção de habilidades.</p>
     </div>
-
     <div class="projects-side-bar-right coluna-maior" style="background: var(--cor--gradiente); width: 40%; margin-left: 5%; padding: 30px;">
-      <!-- Espaço para conteúdo extra -->
-    </div>
+      </div>
   </section>
 
   <section id="education">
@@ -146,7 +171,7 @@
     <h2>Contact</h2>
     <p>Conteúdo da seção de contato.</p>
   </section>
-</body>
 
-<script src="javascript.js"></script>
+  <script src="javascript.js"></script>
+</body>
 </html>
