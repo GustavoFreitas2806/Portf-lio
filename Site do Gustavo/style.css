@@ -111,11 +111,7 @@ nav a.active{
 
 section{
     min-height: 100vh;
-    padding: 5rem 9% 5rem;
-}
-
-#skills{
-    margin-top: 10px;
+    padding: 5rem 9% 10rem;
 }
 
 .home{
@@ -263,6 +259,7 @@ span{
     border-radius: 40px 40px 40px 40px;
     display: flex;
     justify-content: center;
+    margin-top: 1%;
   }
 
   .projects-side-bar-left {
@@ -477,6 +474,42 @@ body.cor-dourada {
 }
 
 
+  /* SECTION PESSOAL */
+    #trajetorias {
+    margin-top: 10px;
+  }
+
+  .img-me {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    max-width: 100%; /* Garante que a imagem não vaze do seu pai */
+    height: auto;
+  }
+
+  .img-me img {
+    width: 20rem;
+  }
+
+
+  #trajetoria-maior {
+    background: var(--cor--gradiente);
+    width: 40%;
+    padding: 30px;
+  }
+
+#trajetoria-menor {
+   background: var(--cor--gradiente);
+   width: 90%;
+   margin-left: 5;
+   padding: 30px;
+   width: 100%;
+
+  }
 
 
 @keyframes cursor{
@@ -535,9 +568,10 @@ body.cor-dourada {
     }
 
     .projects .project-card {
-        width: 100%;
-        margin-left: 0;
-        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 1.5rem; /* Mantém o espaço entre eles */
     }
 
     .projects-side-bar-right{
@@ -559,8 +593,42 @@ body.cor-dourada {
         gap: 3rem;
   }
 
-  
-    .modal-content {
-        
-    }
+  /* TRAJETORIA*/
+
+  .projects {
+    margin-top: 10px;
+  }
+
+  #trajetoria {
+  min-height: auto;
+  height: auto; 
+}
+
+   #trajetoria-maior {
+    background: var(--cor--gradiente);
+    width: 40%;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+   #trajetoria-menor {
+   background: var(--cor--gradiente);
+   width: 90%;
+   margin-left: 5;
+   padding: 30px;
+   width: 100%;
+  }
+
+  .img-me img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  /* height: 80vh; */  /* <-- REMOVA OU COMENTE ESTA LINHA */
+  height: auto;     /* <-- (Opcional) Deixe a altura ser automática */
+  margin-bottom: 30px;
+  margin-top: 30px;
+  }
+}
 
