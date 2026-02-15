@@ -1,39 +1,68 @@
-// Espera a página carregar completamente
 window.addEventListener('DOMContentLoaded', function () {
 
-  // --- LÓGICA DE SCROLL E MENU ATIVO ---
-  // Pega todos os links da navbar
-  const links = document.querySelectorAll('nav a');
-  // Pega todas as seções com id
+  // --- 1. LÓGICA DO MENU MOBILE ---
+  const menuIcon = document.querySelector('#menu-icon');
+  const navbar = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('nav a');
+
+  // Abrir/Fechar ao clicar no ícone
+  if (menuIcon) {
+    menuIcon.addEventListener('click', () => {
+      menuIcon.classList.toggle('fa-times'); // Opcional: ícone de fechar
+      navbar.classList.toggle('active');
+    });
+  }
+
+  // Fechar o menu ao clicar em um link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('active');
+      menuIcon.classList.remove('fa-times');
+    });
+  });
+
+  // --- 2. LÓGICA DE SCROLL E MENU ATIVO ---
   const sections = document.querySelectorAll('section[id]');
-  // Pega o body para manipular classes globais
   const body = document.body;
 
-  // Quando o usuário rolar a página
   window.addEventListener('scroll', function () {
-    // Para cada seção da página
-    sections.forEach(function (section) {
-      // Pega o topo da seção e sua altura
-      const top = window.scrollY;
-      const offset = section.offsetTop - 150; // margem de ativação
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id'); // ex: "skills"
+    // Fecha o menu mobile ao rolar a página (UX melhor)
+    if(navbar.classList.contains('active')){
+        navbar.classList.remove('active');
+        if(menuIcon) menuIcon.classList.remove('fa-times');
+    }
 
-      // Verifica se o scroll está dentro da seção
+    const top = window.scrollY;
+
+    sections.forEach(function (section) {
+      const offset = section.offsetTop - 150; // Margem para ativar a cor antes de chegar no topo exato
+      const height = section.offsetHeight;
+      
+      // Pega o ID da seção atual
+      let id = section.getAttribute('id'); 
+
+      // --- CORREÇÃO IMPORTANTE AQUI ---
+      // Se a seção for "certificacoes", fingimos que é "cursos" para acender o botão certo
+      if (id === 'certificacoes') {
+        id = 'cursos';
+      }
+
+      // Verifica se o scroll está dentro desta seção
       if (top >= offset && top < offset + height) {
-        // Remove "active" de todos os links
-        links.forEach(function (link) {
+        
+        // 1. Remove "active" de todos os links
+        navLinks.forEach(function (link) {
           link.classList.remove('active');
         });
 
-        // Adiciona "active" no link correspondente à seção atual
+        // 2. Adiciona "active" APENAS no link correspondente
+        // O seletor procura: nav a[href="#cursos"]
         const currentLink = document.querySelector('nav a[href="#' + id + '"]');
         if (currentLink) {
           currentLink.classList.add('active');
         }
 
-        // Altera a cor principal de acordo com a seção atual
-        // Se não for a seção "home", ativa a cor dourada
+        // 3. Muda a cor do tema (Dourado se não for Home)
         if (id !== 'home') {
           body.classList.add('cor-dourada');
         } else {
@@ -43,40 +72,35 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // --- LÓGICA PARA MÚLTIPLOS MODAIS ---
-  // Pega todos os botões que abrem modais
+  // --- 3. LÓGICA DOS MODAIS ---
   const openModalButtons = document.querySelectorAll(".open-modal");
-  // Pega todos os botões de fechar
   const closeModalButtons = document.querySelectorAll(".close-modal");
-  // Pega todos os overlays
   const modalOverlays = document.querySelectorAll(".modal-overlay");
 
-  // Adiciona o evento de clique para cada botão de abrir
+  // Abrir modal
   openModalButtons.forEach(button => {
     button.addEventListener("click", (e) => {
-      e.preventDefault(); // Impede o comportamento padrão do link
-
+      e.preventDefault();
       const modalId = button.getAttribute("data-modal-target");
       const modal = document.querySelector(modalId);
-
       if (modal) {
         modal.style.display = "flex";
-        // Força o reflow para a transição funcionar
-        void modal.offsetWidth;
+        // Força o navegador a reconhecer a mudança para ativar a transição CSS
+        void modal.offsetWidth; 
         modal.classList.add("show");
       }
     });
   });
 
-  // Função para fechar um modal
+  // Função para fechar modal
   const closeModal = (modal) => {
     modal.classList.remove("show");
     setTimeout(() => {
       modal.style.display = "none";
-    }, 300); // Deve ser o mesmo tempo da transição no CSS
+    }, 300); // 300ms deve ser igual ao transition do CSS
   };
 
-  // Adiciona o evento de clique para cada botão de fechar
+  // Botão de fechar (X)
   closeModalButtons.forEach(button => {
     button.addEventListener("click", () => {
       const modal = button.closest(".modal-overlay");
@@ -84,7 +108,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Adiciona o evento de clique para fechar ao clicar fora (no overlay)
+  // Clicar fora do modal (Overlay)
   modalOverlays.forEach(overlay => {
     overlay.addEventListener("click", (e) => {
       if (e.target === overlay) {
@@ -92,4 +116,5 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
 });

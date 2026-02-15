@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,11 +13,16 @@
 <body>
   <header>
     <a href="#" class="logo">Gustavo Freitas</a>
+
+    <div id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
     <nav>
       <a href="#home" class="nav-link active">Inicial</a>
       <a href="#projects" class="nav-link">Sobre mim</a>
       <a href="#trajetoria" class="nav-link">Trajetória</a>
-      <a href="#education" class="nav-link">Educação</a>
+      <a href="#certificacoes" class="nav-link">Cursos</a>
       <a href="#experience" class="nav-link">Experiência</a>
       <a href="#contact" class="nav-link">Contato</a>
     </nav>
@@ -29,7 +35,8 @@
     <div class="home-content">
       <h1>Olá! Sou o <span>Gustavo Freitas</span></h1>
       <h3 class="typing-text">Sou <span></span></h3>
-      <p>Seja muito bem-vindo (a) ao meu portfólio. Aqui quero que veja um pouquinho mais sobre quem eu sou, sobre minha vida acadêmica e profissional.</p>
+      <p>Seja muito bem-vindo (a) ao meu portfólio. Aqui quero que veja um pouquinho mais sobre quem eu sou, sobre minha
+        vida acadêmica e profissional.</p>
       <div class="social-icons">
         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -41,51 +48,52 @@
   </section>
 
   <section class="projects" id="projects">
-    
     <div class="projects-side-bar-left coluna-menor" style="background: var(--cor--gradiente)">
       <img src="img/euIOS.png" alt="Gustavo Freitas IOS" />
       <h1>Gustavo Freitas</h1>
       <h2>Contatos</h2>
-
       <p><i class="fas fa-phone"></i> (13) 98802-8035</p>
       <p><i class="fab fa-linkedin"></i> Gustavo Freitas</p>
       <p><i class="fas fa-envelope"></i> gustavofreita2013@gmail.com</p>
       <p><i class="fas fa-map-marker-alt"></i> Santos, SP - Brasil</p>
+      <a href="Gustavo_Curriculo.pdf" download="Curriculo_Gustavo_Freitas.pdf" class="btn"
+        style="margin-top: 8rem; width: 100%; display: flex; justify-content: center; align-items: center;">Baixar
+        CV</a>
     </div>
 
     <div class="projects-side-bar-right coluna-maior" style="background: var(--cor--gradiente)">
       <h1>Quem eu sou?</h1>
       <h2 class="projects-title">Conheça mais:</h2>
-
       <div class="projects-container">
         <div class="project-card">
           <img src="img/alocacao-de-recursos.png" alt="Selenium" style="width: 50px">
           <h3 class="project-title">Analista de Testes</h3>
-          <p class="project-desc">Realizo testes e automações, visando garantir a qualidade do produto e atender os requisitos.</p>
+          <p class="project-desc">Realizo testes e automações, visando garantir a qualidade do produto e atender os
+            requisitos.</p>
           <p class="project-tech">Java · Selenium · WebDriver · JUnit</p>
           <a href="#" class="project-link open-modal" data-modal-target="#modal">Saiba mais</a>
         </div>
-
         <div class="project-card">
           <img src="img/pngwing.com (4).png" alt="Desenvolvedor" style="width: 50px">
           <h3 class="project-title">Desenvolvedor</h3>
-          <p class="project-desc">Desenvolvo sites e aplicativos, construindo projetos tecnológicos que agregam valor.</p>
+          <p class="project-desc">Desenvolvo sites e aplicativos, construindo projetos tecnológicos que agregam valor.
+          </p>
           <p class="project-tech">Java · SpringBoot · JavaScript · MySql</p>
           <a href="#" class="project-link open-modal" data-modal-target="#modal-dev">Saiba mais</a>
         </div>
-
         <div class="project-card">
           <img src="img/programador.png" alt="Estudante do ADS" style="width: 50px">
           <h3 class="project-title">Estudante de ADS</h3>
-          <p class="project-desc">Estudo na FATEC, no último ano. Sou formado em Técnico em Desenvolvimento de Sistemas pela ETEC.</p>
+          <p class="project-desc">Estudo na FATEC, no último ano. Sou formado em Técnico em Desenvolvimento de Sistemas
+            pela ETEC.</p>
           <p class="project-tech">Gestão de Equipes e Projetos · Desenvolvimento</p>
           <a href="#" class="project-link open-modal" data-modal-target="#modal-student">Saiba mais</a>
         </div>
-
         <div class="project-card">
           <img src="img/suporte-tecnico (1).png" alt="Analista de HelpDesk" style="width: 50px">
           <h3 class="project-title">Analista de HelpDesk</h3>
-          <p class="project-desc">Trabalho atualmente respondendo chamados, garantindo a qualidade da experiência do cliente.</p>
+          <p class="project-desc">Trabalho atualmente respondendo chamados, garantindo a qualidade da experiência do
+            cliente.</p>
           <p class="project-tech">Gestão de Chamados N1 · Atendimento ao Cliente</p>
           <a href="#" class="project-link open-modal" data-modal-target="#modal-helpdesk">Saiba mais</a>
         </div>
@@ -97,61 +105,46 @@
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h1 style="color: black;">Portfólio: Analista de Testes</h1>
-      <p style="color: black; font-size: 1.6rem;">
-        Como Analista de Testes, foco em garantir a qualidade do software através de testes manuais e automação. Utilizo ferramentas como Selenium e JUnit para criar testes robustos e confiáveis.
-      </p>
-      <div class="modal-gallery">
-        <img src="img/alocacao-de-recursos.png" alt="Relatório de Testes">
-      </div>
+      <p style="color: black; font-size: 1.6rem;">Como Analista de Testes, foco em garantir a qualidade do software
+        através de testes manuais e automação. Utilizo ferramentas como Selenium e JUnit para criar testes robustos e
+        confiáveis.</p>
+      <div class="modal-gallery"><img src="img/alocacao-de-recursos.png" alt="Relatório de Testes"></div>
     </div>
   </div>
-
   <div id="modal-dev" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h1 style="color: black;">Portfólio: Desenvolvedor</h1>
-      <p style="color: black; font-size: 1.6rem;">
-        Detalhes sobre projetos de desenvolvimento, Java e SpringBoot, e exemplos de código ou links para repositórios.
-      </p>
-      <div class="modal-gallery">
-        <img src="img/pngwing.com (4).png" alt="Desenvolvimento">
-      </div>
+      <p style="color: black; font-size: 1.6rem;">Detalhes sobre projetos de desenvolvimento, Java e SpringBoot, e
+        exemplos de código ou links para repositórios.</p>
+      <div class="modal-gallery"><img src="img/pngwing.com (4).png" alt="Desenvolvimento"></div>
     </div>
   </div>
-
   <div id="modal-student" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h1 style="color: black;">Portfólio: Estudante de ADS</h1>
-      <p style="color: black; font-size: 1.6rem;">
-        Jornada acadêmica na FATEC Rubens Lara e projetos desenvolvidos durante o curso.
-      </p>
-      <div class="modal-gallery">
-        <img src="img/programador.png" alt="Estudante">
-      </div>
+      <p style="color: black; font-size: 1.6rem;">Jornada acadêmica na FATEC Rubens Lara...</p>
+      <div class="modal-gallery"><img src="img/programador.png" alt="Estudante"></div>
     </div>
   </div>
-
   <div id="modal-helpdesk" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h1 style="color: black;">Portfólio: Analista de HelpDesk</h1>
-      <p style="color: black; font-size: 1.6rem;">
-        Experiência com suporte ao cliente, resolução de problemas e garantia da qualidade da experiência do usuário.
-      </p>
-      <div class="modal-gallery">
-        <img src="img/suporte-tecnico (1).png" alt="HelpDesk">
-      </div>
+      <p style="color: black; font-size: 1.6rem;">Experiência com suporte ao cliente, resolução de problemas e garantia
+        da qualidade da experiência do usuário.</p>
+      <div class="modal-gallery"><img src="img/suporte-tecnico (1).png" alt="HelpDesk"></div>
     </div>
   </div>
 
   <section class="projects" id="trajetoria">
-    
-    <div class="projects-side-bar-left coluna-menor" id="trajetoria-educacao">
-      <h2 style="margin-bottom: 2rem;">Experiência Acadêmica</h2>
-      
+
+    <div class="projects-side-bar-left coluna-menor" id="trajetoria-menor">
+      <h2 style="margin-bottom: 2rem;">Educação</h2>
+
       <div class="timeline">
-        
+
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2023 - 2026</div>
@@ -159,17 +152,18 @@
             <h3>Tecnólogo em Análise e Des. de Sistemas</h3>
             <h4>FATEC Rubens Lara - Santos/SP</h4>
             <p>
-              Ensino superior focado em Engenharia de Software, Gestão de Projetos e Programação (Java/Spring). Foram realizados projetos se baseando nas metodologias de projetos atuais, como as ágeis por exemplo.
+              Ensino superior focado em Engenharia de Software, Gestão de Projetos e Programação (Java/Spring). Foram
+              realizados diversos projetos utilizando metodologias do mercado atuais, utilizando soluções existentes
+              para resolver problemas.
             </p>
             <div class="timeline-tags">
               <span><b>Presencial</b></span>
               <span>Java</span>
-              <span>Scrum</span>
               <span>Python</span>
-              <span>MySql</span>
+              <span>Scrum</span>
+              <span>Gestão de Projetos</span>
               <span>Linguagem C</span>
-              <span>Estrutura de dados</span>
-              <span>Gestão de projetos</span>
+              <span>Estrutura de Dados</span>
             </div>
           </div>
         </div>
@@ -181,7 +175,8 @@
             <h3>Técnico em Desenvolvimento de Sistemas</h3>
             <h4>ETEC Doutora Ruth Cardoso - São Vicente/SP</h4>
             <p>
-              Base técnica em lógica de programação e banco de dados. No curso, foram desenvolvidos diversos projetos utilizando linguagens de programação, resolvendo problemas comuns no mercado em exercícios.
+              Base técnica em lógica de programação e banco de dados. No curso, foram desenvolvidos diversos projetos
+              utilizando linguagens de programação, resolvendo problemas comuns no mercado em exercícios.
             </p>
             <div class="timeline-tags">
               <span><b>Presencial</b></span>
@@ -197,12 +192,11 @@
       </div>
     </div>
 
-    <div class="projects-side-bar-right coluna-maior" id="trajetoria-profissional">
+    <div class="projects-side-bar-right coluna-maior" id="trajetoria-maior">
       <h2 style="margin-bottom: 2rem;">Experiência Profissional</h2>
-      
-      
+
       <div class="timeline">
-        
+
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date"><b>Ago/2025 - Atualmente</b></div>
@@ -210,12 +204,15 @@
             <h3>Analista de HelpDesk</h3>
             <h4>SOC - Age Desenvolvimento de Sistemas</h4>
             <p>
-              Responsável pela análise aprofundada de erros sistêmicos e validação de regras de negócio conforme documentação. Atuo também na execução de testes de novas funcionalidades em dias de atualizações, fornecendo feedback direto ao time de desenvolvimento e garantindo a qualidade das entregas. Realizo também, treinamentos para os usuários finais do software e consultorias quando necessário. 
+              Responsável pela análise aprofundada de erros sistêmicos e validação de regras de negócio conforme
+              documentação. Atuo também na execução de testes de novas funcionalidades em dias de atualizações,
+              fornecendo feedback direto ao time de desenvolvimento e garantindo a qualidade das entregas. Realizo
+              também, treinamentos para os usuários finais do software e consultorias quando necessário.
             </p>
             <div class="timeline-tags">
               <span>Mapeamento de Erros</span>
-              <span>Testes</span>
-              <span>Treinamentos para Clientes</span>
+              <span>Treinamento para Clientes</span>
+              <span>Testes de Software</span>
             </div>
           </div>
         </div>
@@ -227,7 +224,8 @@
             <h3>Assistente de HelpDesk</h3>
             <h4>SOC - Age Desenvolvimento de Sistemas</h4>
             <p>
-              Atuação focada no atendimento ao cliente e suporte na resolução de chamados. Realizei escalonamento de tickets para o time de Desenvolvimento em casos de BUGs, e atualizações da documentação quando necessário.
+              Atuação focada no atendimento ao cliente e suporte na resolução de chamados. Realizei escalonamento de
+              tickets para o time de Desenvolvimento em casos de BUGs, e atualizações da documentação quando necessário.
             </p>
             <div class="timeline-tags">
               <span>Suporte N1</span>
@@ -244,13 +242,14 @@
             <h3>Estagiário - Relacionamento e Negócios</h3>
             <h4>SOC - Age Desenvolvimento de Sistemas</h4>
             <p>
-              Início da jornada na empresa, com foco no aprendizado das regras de negócio e relacionamento com clientes. Desenvolvimento de soft skills essenciais e entendimento do ecossistema do software SOC SST.
+              Início da jornada na empresa, com foco no aprendizado das regras de negócio e relacionamento com clientes.
+              Desenvolvimento de soft skills essenciais e entendimento do ecossistema do software SOC SST.
             </p>
             <div class="timeline-tags">
               <span>Relacionamento</span>
               <span>Software SOC</span>
               <span>Negócios</span>
-              <span>Comunicação e Flexibilidade</span>
+              <span>Comunicação e Flexibidade</span>
             </div>
           </div>
         </div>
@@ -262,7 +261,8 @@
             <h3>Auxiliar Técnico TI</h3>
             <h4>FORTEC / FATEF</h4>
             <p>
-              Suporte técnico abrangente a softwares e hardwares, incluindo manutenção de redes e equipamentos. Atuei também na automatização de processos manuais, otimizando a rotina interna da instituição.
+              Suporte técnico abrangente a softwares e hardwares, incluindo manutenção de redes e equipamentos. Atuei
+              também na automatização de processos manuais, otimizando a rotina interna da instituição.
             </p>
             <div class="timeline-tags">
               <span>Infraestrutura</span>
@@ -280,7 +280,8 @@
             <h3>Aprendiz de Suporte de TI</h3>
             <h4>Brasil Terminal Portuário (BTP)</h4>
             <p>
-              Primeira experiência profissional em TI. Responsável pela preparação e instalação de equipamentos (computadores, coletores, rádios), gestão de usuários e suporte direto aos colaboradores.
+              Primeira experiência profissional em TI. Responsável pela preparação e instalação de equipamentos
+              (computadores, coletores, rádios), gestão de usuários e suporte direto aos colaboradores.
             </p>
             <div class="timeline-tags">
               <span>Hardware</span>
@@ -294,9 +295,63 @@
     </div>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p>Conteúdo da seção de formação acadêmica.</p>
+  <section class="certifications" id="certificacoes">
+    <h2 class="section-title">Mural de <span style="color: var(--cor-fonte);">Certificações e Cursos</span></h2>
+
+    <div class="carousel-container">
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+        <h3>AZ-900: Azure Fundamentals</h3>
+        <p>Microsoft</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-bug"></i></div>
+        <h3>QA: WebDriver & Selenium</h3>
+        <p>Udemy</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-java"></i></div>
+        <h3>Trilha Java</h3>
+        <p>Alura</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-users-cog"></i></div>
+        <h3>Metodologia Ágil SCRUM</h3>
+        <p>Alura</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-code"></i></div>
+        <h3>Linguagem C#</h3>
+        <p>Fundação Bradesco</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-clipboard-check"></i></div>
+        <h3>QA: Plano de Testes e Bugs</h3>
+        <p>Alura</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-file-excel"></i></div>
+        <h3>Excel Básico & Office 365</h3>
+        <p>Universidade BTP</p>
+        <span class="cert-status">Concluído</span>
+      </div>
+
+    </div>
+
+    <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> Arraste para o lado</p>
   </section>
 
   <section id="experience">
@@ -311,4 +366,5 @@
 
   <script src="javascript.js"></script>
 </body>
+
 </html>

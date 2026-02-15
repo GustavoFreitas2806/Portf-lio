@@ -64,6 +64,7 @@ header{
     transform: scale(1.1);
 }
 
+/* Menu Desktop */
 nav a{
     font-size: 1.8rem;
     color: white;
@@ -77,6 +78,14 @@ nav a:hover,
 nav a.active{
     color: var(--cor-fonte);
     border-bottom: 3px solid var(--cor-fonte);
+}
+
+/* Ícone do Menu Mobile (Escondido no Desktop) */
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--cor-fonte);
+    display: none;
+    cursor: pointer;
 }
 
 /* --- SECTION GERAL --- */
@@ -205,21 +214,12 @@ span{
 }
 
 /* --- PROJECTS / PORTFOLIO --- */
-.home-projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: rgb(236, 236, 236);
-    margin: 100px;
-}
-
 .projects {
     background-color: var(--cor-background);
     padding: 8rem 9% 5rem;
     color: white;
     text-align: center;
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     margin-top: 1%;
@@ -240,7 +240,7 @@ span{
     background-color: var(--cor-background);
 }
 
-.projects-side-bar-left h2, .projects-side-bar-right h2 {
+.projects-side-bar-left h2 {
     font-size: 2rem;
     color: var(--cor-fonte-dourado);
     margin-bottom: 1rem;
@@ -429,42 +429,39 @@ body.cor-dourada {
     transition: color 0.3s ease;
 }
 
-/* --- TRAJETÓRIA (TIMELINE) - FLEX RESPONSIVO --- */
+/* --- TRAJETÓRIA (TIMELINE) - LADO A LADO --- */
 
-/* Configuração do container pai */
+/* Configuração do container pai para alinhamento horizontal */
 #trajetoria {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Garante que colunas tenham mesma altura */
+    justify-content: center; 
+    align-items: stretch; /* Garante alturas iguais */
     gap: 2rem;
     flex-wrap: wrap; 
 }
 
 /* COLUNA ESQUERDA (EDUCAÇÃO) - Menor */
-#trajetoria #trajetoria-educacao {
-    flex: 35; /* Proporção ~35% */
+#trajetoria #trajetoria-menor {
+    width: 32%; /* Largura calculada para caber */
     margin: 0;
-    padding: 30px 30px 30px 40px; 
+    padding: 30px; 
     display: flex;
     flex-direction: column;
-    min-width: 300px; /* Evita ficar muito estreito */
 }
 
 /* COLUNA DIREITA (PROFISSIONAL) - Maior */
-#trajetoria #trajetoria-profissional {
-    flex: 60; /* Proporção ~60% */
+#trajetoria #trajetoria-maior {
+    width: 62%; /* Largura calculada para caber */
     margin: 0;
     padding: 30px 30px 30px 40px;
     display: flex;
     flex-direction: column;
-    min-width: 300px;
 }
 
 /* Container da Linha do Tempo */
 .timeline {
     position: relative;
     max-width: 100%;
-    flex: 1; /* Ocupa espaço disponível */
 }
 
 /* A Linha Vertical */
@@ -527,7 +524,7 @@ body.cor-dourada {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
-    height: 100%; /* Preenche altura se necessário */
+    height: 100%; 
 }
 
 .timeline-item:hover .timeline-content {
@@ -542,7 +539,6 @@ body.cor-dourada {
     margin-bottom: 0.5rem;
 }
 
-/* H4 com margem reduzida (Espaço subtítulo-descrição) */
 .timeline-content h4 {
     font-size: 1.6rem;
     color: white;
@@ -579,32 +575,145 @@ body.cor-dourada {
     color: black;
 }
 
-/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
+/* --- SEÇÃO CERTIFICAÇÕES (CARROSSEL) --- */
+
+.certifications {
+    text-align: center;
+    background-color: var(--cor-background);
+    padding: 8rem 9% 5rem;
+    border-radius: 40px; 
+    margin: 1rem 0rem;
+}
+
+.section-title {
+    font-size: 4rem;
+    color: var(--cor-fonte-dourado);
+    background-color: #232323;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+
+/* Container do Scroll Horizontal */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 2rem 5%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: var(--cor-fonte);
+    border-radius: 10px;
+}
+
+/* Estilo dos Cards de Certificação */
+.cert-card {
+    background: var(--cor--gradiente);
+    border: 1px solid var(--cor-fonte-dourado);
+    border-radius: 15px;
+    padding: 2rem;
+    min-width: 250px;
+    max-width: 250px;
+    text-align: center;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(41, 128, 185, 0.4);
+    border-color: var(--cor-fonte);
+}
+
+.cert-icon {
+    font-size: 4rem;
+    color: var(--cor-fonte);
+    margin-bottom: 1.5rem;
+}
+
+.cert-card h3 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cert-card p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.cert-status {
+    font-size: 1.2rem;
+    color: var(--cor-fonte-dourado);
+    border: 1px solid var(--cor-fonte-dourado);
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.swipe-hint {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #666;
+    animation: fadePulse 2s infinite;
+}
+
+@keyframes fadePulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* --- MEDIA QUERIES (RESPONSIVIDADE MOBILE) --- */
 
 @media(max-width:995px){
     /* MENU RESPONSIVO */
-    nav{
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid var(--cor-fonte);
-        border-bottom: 3px solid var(--cor-fonte);
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    #menu-icon {
+        display: block; /* Mostra o ícone */
     }
 
-    nav.active{
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background-color: var(--cor-background);
+        backdrop-filter: blur(10px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--cor-fonte);
+        border-bottom: 2px solid var(--cor-fonte);
+        display: none; /* Escondido por padrão */
+    }
+
+    /* Classe ativada pelo JS */
+    nav.active {
         display: block;
     }
 
-    nav a{
+    nav a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        color: white;
     }
 
     nav a:hover,
@@ -651,7 +760,7 @@ body.cor-dourada {
     /* CORREÇÃO DO OVERFLOW NO MOBILE */
     .projects-container {
         display: grid;
-        grid-template-columns: 1fr; /* Força 1 coluna que se adapta ao container */
+        grid-template-columns: 1fr; /* Força 1 coluna */
         gap: 2rem;
         width: 100%;
     }
@@ -675,7 +784,7 @@ body.cor-dourada {
     }
     
     .projects-side-bar-left p {
-        justify-content: center; /* Centraliza ícones e texto */
+        justify-content: center; 
         margin-top: 2rem;
     }
 
@@ -684,17 +793,25 @@ body.cor-dourada {
         flex-direction: column;
     }
 
-    #trajetoria #trajetoria-educacao,
-    #trajetoria #trajetoria-profissional {
+    #trajetoria #trajetoria-menor,
+    #trajetoria #trajetoria-maior {
         width: 100%; /* Ocupa 100% no mobile */
-        flex: none;  /* Desativa a proporção flex */
         padding: 30px;
         padding-left: 20px;
         margin-bottom: 2rem;
-        min-width: auto; /* Remove min-width para não quebrar telas pequenas */
+        min-width: auto; 
     }
     
     .timeline::before { left: 0px; }
     .timeline-dot { left: -9px; }
     .timeline-content { padding: 2rem; }
+
+    /* CERTIFICAÇÕES MOBILE */
+    .carousel-container {
+        padding-left: 2rem;
+        justify-content: flex-start;
+    }
+    .cert-card {
+        min-width: 220px;
+    }
 }
