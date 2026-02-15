@@ -240,7 +240,7 @@ span{
     background-color: var(--cor-background);
 }
 
-.projects-side-bar-left h2 {
+.projects-side-bar-left h2, .projects-side-bar-right h2 {
     font-size: 2rem;
     color: var(--cor-fonte-dourado);
     margin-bottom: 1rem;
@@ -813,5 +813,31 @@ body.cor-dourada {
     }
     .cert-card {
         min-width: 220px;
+    }
+}
+
+/* --- ADICIONE ISSO NO FINAL DO STYLE.CSS PARA O TEXTO FUNCIONAR --- */
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid transparent;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Analista de Testes";
+    }
+    21%, 40% {
+        content: "Desenvolvedor";
+    }
+    41%, 60% {
+        content: "Entusiasta por Tecnologia";
+    }
+    61%, 80% {
+        content: "Estudante de ADS";
+    }
+    81%, 100% {
+        content: "Analista de HelpDesk";
     }
 }
