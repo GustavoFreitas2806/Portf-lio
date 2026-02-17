@@ -88,6 +88,93 @@ nav a.active{
     cursor: pointer;
 }
 
+/* Container Principal */
+.language-selector {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: white;
+}
+
+/* Parte visível (Botão) */
+.selected-lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.selected-lang:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Lista Suspensa (Dropdown) - Inicialmente oculta */
+.lang-options {
+    position: absolute;
+    top: 110%; /* Fica logo abaixo do botão */
+    right: 0;
+    background: var(--cor-background); /* Usa a cor do seu fundo */
+    border: 1px solid var(--cor-fonte);
+    border-radius: 8px;
+    list-style: none;
+    display: none; /* Escondido por padrão */
+    width: 150px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+/* Mostra o menu quando tiver a classe 'active' */
+.language-selector.active .lang-options {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Itens da lista */
+.lang-options li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    transition: 0.2s;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.lang-options li:hover {
+    background: var(--cor-fonte);
+    color: black;
+}
+
+.lang-options li:last-child {
+    border-bottom: none;
+}
+
+/* --- ESTILO DAS BANDEIRAS (CSS PURO) --- */
+.lang-flag {
+    width: 24px;
+    height: 16px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Você pode usar imagens reais aqui. Exemplo com links provisórios: */
+.lang-flag.br {
+    background-image: url('https://flagcdn.com/w40/br.png');
+}
+.lang-flag.us {
+    background-image: url('https://flagcdn.com/w40/us.png');
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* --- SECTION GERAL --- */
 section{
     min-height: 100vh;
@@ -308,6 +395,7 @@ span{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
+    margin-top: 5rem;
 }
 
 .project-card {
@@ -692,7 +780,7 @@ body.cor-dourada {
 
     nav {
         position: absolute;
-        top: 100%;
+        top: 100%; /* Posição padrão */
         right: 0;
         width: 50%;
         padding: 1rem 3%;
@@ -701,7 +789,16 @@ body.cor-dourada {
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--cor-fonte);
         border-bottom: 2px solid var(--cor-fonte);
-        display: none; /* Escondido por padrão */
+        
+        /* --- A CORREÇÃO ESTÁ AQUI EMBAIXO --- */
+        
+        /* Adiciona uma borda no topo para conectar visualmente com o header */
+        border-top: 2px solid var(--cor-background);
+        
+        /* Puxa o menu 1 ou 2 pixels para cima para fechar o vão */
+        margin-top: -4px; 
+        
+        display: none;
     }
 
     /* Classe ativada pelo JS */
@@ -772,6 +869,7 @@ body.cor-dourada {
         align-items: center;
         width: 100%;
         margin-left: 0;
+        padding-bottom: 100px;
     }
     
     .projects-side-bar-left{
@@ -814,6 +912,62 @@ body.cor-dourada {
     .cert-card {
         min-width: 220px;
     }
+
+    header {
+        /* Garante que os itens fiquem alinhados verticalmente */
+        align-items: center; 
+    }
+
+    /* 1. Força a ordem visual: Logo (1), Bandeira (2), Menu (3) */
+    .logo {
+        order: 1;
+    }
+
+    .language-selector {
+        order: 2;
+        /* "auto" na esquerda empurra a bandeira e o menu lá para a direita */
+        margin-left: auto; 
+        /* Cria o espaço que você pediu entre a bandeira e o menu */
+        margin-right: 2rem; 
+    }
+
+    #menu-icon {
+        order: 3;
+        /* Remove margens antigas se houver */
+        margin-left: 0; 
+    }
+
+    /* Garante que o dropdown da língua não fique cortado na tela */
+    .lang-options {
+        right: -10px; /* Ajusta levemente a posição do menu suspenso */
+        width: 140px;
+    }
+}
+
+
+/* Remove qualquer pseudo-elemento que o FontAwesome ou o navegador tente criar */
+#menu-icon::before,
+#menu-icon::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Garante que não tenha borda ou fundo estranho quando clicado */
+#menu-icon {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    /* Se o quadrado for uma cor de fundo, isso resolve: */
+    -webkit-tap-highlight-color: transparent; 
+}
+
+/* Previne que o ícone mude de cor ou ganhe fundo ao ser clicado */
+#menu-icon:focus,
+#menu-icon:active,
+#menu-icon:hover {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* --- ADICIONE ISSO NO FINAL DO STYLE.CSS PARA O TEXTO FUNCIONAR --- */

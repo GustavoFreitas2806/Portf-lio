@@ -19,13 +19,32 @@
     </div>
 
     <nav>
-      <a href="#home" class="nav-link active">Inicial</a>
-      <a href="#projects" class="nav-link">Sobre mim</a>
-      <a href="#trajetoria" class="nav-link">Trajetória</a>
-      <a href="#certificacoes" class="nav-link">Cursos</a>
-      <a href="#experience" class="nav-link">Experiência</a>
-      <a href="#contact" class="nav-link">Contato</a>
+      <a href="#home" class="nav-link active" data-lang="menu_inicial">Inicial</a>
+      <a href="#projects" class="nav-link" data-lang="menu_sobre">Sobre mim</a>
+      <a href="#trajetoria" class="nav-link" data-lang="menu_trajetoria">Trajetória</a>
+      <a href="#certificacoes" class="nav-link" data-lang="menu_cursos">Cursos</a>
+      <a href="#experience" class="nav-link" data-lang="menu_xp">Experiência</a>
+      <a href="#contact" class="nav-link" data-lang="menu_contato">Contato</a>
     </nav>
+
+    <div class="language-selector">
+      <div class="selected-lang">
+        <div class="lang-flag br"></div> <span class="lang-text">PT</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+
+      <ul class="lang-options">
+        <li data-lang="pt">
+          <div class="lang-flag br"></div>
+          <span>Português</span>
+        </li>
+        <li data-lang="en">
+          <div class="lang-flag us"></div>
+          <span>English</span>
+        </li>
+      </ul>
+    </div>
+
   </header>
 
   <section class="home" id="home">
@@ -33,17 +52,21 @@
       <img src="img/main.png" alt="Gustavo Freitas Foto Principal" />
     </div>
     <div class="home-content">
-      <h1>Olá! Sou o <span>Gustavo Freitas</span></h1>
-      <h3 class="typing-text">Sou <span></span></h3>
-      <p>Seja muito bem-vindo (a) ao meu portfólio. Aqui quero que veja um pouquinho mais sobre quem eu sou, sobre minha
-        vida acadêmica e profissional.</p>
+      <h1><strong data-lang="ola_sou" style="font-weight: 700;">Olá! Sou o</strong> <span>Gustavo Freitas</span></h1>
+
+      <h3 class="typing-text"><strong data-lang="sou" style="font-weight: 700;">Sou</strong> <span></span></h3>
+
+      <p data-lang="home_desc">Seja muito bem-vindo (a) ao meu portfólio. Aqui quero que veja um pouquinho mais sobre
+        quem eu sou, sobre minha vida acadêmica e profissional.</p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/gustavo-freitas-8109bb201" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/gustavo-freitas-8109bb201" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/GustavoFreitas2806" target="_blank"><i class="fa-brands fa-github"></i></a>
         <a href="https://wa.me/5513988028035" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:gustavofreita2013@gmail.com?subject=Olá! Gostaria de entrar em contato com você :)" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:gustavofreita2013@gmail.com?subject=Olá! Gostaria de entrar em contato com você :)"
+          target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
-      <a href="#projects" class="btn">Saiba mais</a>
+      <a href="#projects" class="btn" data-lang="btn_saiba_mais">Saiba mais</a>
     </div>
   </section>
 
@@ -51,52 +74,72 @@
     <div class="projects-side-bar-left coluna-menor" style="background: var(--cor--gradiente)">
       <img src="img/euIOS.png" alt="Gustavo Freitas IOS" />
       <h1>Gustavo Freitas</h1>
-      <h2>Contatos</h2>
-      <p><i class="fas fa-phone"></i> (13) 98802-8035</p>
-      <p><i class="fab fa-linkedin"></i> Gustavo Freitas</p>
-      <p><i class="fas fa-envelope"></i> gustavofreita2013@gmail.com</p>
+      <h2 data-lang="titulo_contatos">Contatos</h2>
+      <p><a href="https://wa.me/5513988028035" target="_blank" style="color: inherit;"><i class="fas fa-phone"></i> (13)
+          98802-8035</a></p>
+      <p><a href="https://www.linkedin.com/in/gustavo-freitas-8109bb201" target="_blank" style="color: inherit;"><i
+            class="fab fa-linkedin"></i> Gustavo Freitas</a></p>
+      <p><a href="mailto:gustavofreita2013@gmail.com" style="color: inherit;"><i class="fas fa-envelope"></i>
+          gustavofreita2013@gmail.com</a></p>
       <p><i class="fas fa-map-marker-alt"></i> Santos, SP - Brasil</p>
       <a href="Gustavo_Curriculo.pdf" download="Curriculo_Gustavo_Freitas.pdf" class="btn"
-        style="margin-top: 8rem; width: 100%; display: flex; justify-content: center; align-items: center;">Baixar
-        CV</a>
+        style="margin-top: 8rem; width: 100%; display: flex; justify-content: center; align-items: center;"
+        data-lang="btn_baixar_cv">Baixar CV</a>
     </div>
 
     <div class="projects-side-bar-right coluna-maior" style="background: var(--cor--gradiente)">
-      <h1>Quem eu sou?</h1>
-      <h2 class="projects-title">Conheça mais:</h2>
+      <h1 data-lang="quem_sou_eu">Quem eu sou?</h1>
+      <h2 class="projects-title" data-lang="conheca_mais">Conheça mais:</h2>
       <div class="projects-container">
+
         <div class="project-card">
           <img src="img/alocacao-de-recursos.png" alt="Selenium" style="width: 50px">
-          <h3 class="project-title">Analista de Testes</h3>
-          <p class="project-desc">Realizo testes e automações, visando garantir a qualidade do produto e atender os
-            requisitos.</p>
-          <p class="project-tech">Java · Selenium · WebDriver · JUnit</p>
-          <a href="#" class="project-link open-modal" data-modal-target="#modal">Saiba mais</a>
+          <h3 class="project-title" data-lang="card_qa_titulo">Analista de Testes</h3>
+          <p class="project-desc" data-lang="card_qa_desc">Realizo testes e automações, visando garantir a qualidade do
+            produto e atender os requisitos.</p>
+
+          <p class="project-tech" data-lang="tech_qa">Java · Selenium · WebDriver · JUnit</p>
+
+          <a href="#" class="project-link open-modal" data-modal-target="#modal" data-lang="link_saiba_mais">Saiba
+            mais</a>
         </div>
+
         <div class="project-card">
           <img src="img/pngwing.com (4).png" alt="Desenvolvedor" style="width: 50px">
-          <h3 class="project-title">Desenvolvedor</h3>
-          <p class="project-desc">Desenvolvo sites e aplicativos, construindo projetos tecnológicos que agregam valor.
-          </p>
-          <p class="project-tech">Java · SpringBoot · JavaScript · MySql</p>
-          <a href="#" class="project-link open-modal" data-modal-target="#modal-dev">Saiba mais</a>
+          <h3 class="project-title" data-lang="card_dev_titulo">Desenvolvedor</h3>
+          <p class="project-desc" data-lang="card_dev_desc">Desenvolvo sites e aplicativos, construindo projetos
+            tecnológicos que agregam valor.</p>
+
+          <p class="project-tech" data-lang="tech_dev">Java · SpringBoot · JavaScript · MySql</p>
+
+          <a href="#" class="project-link open-modal" data-modal-target="#modal-dev" data-lang="link_saiba_mais">Saiba
+            mais</a>
         </div>
+
         <div class="project-card">
           <img src="img/programador.png" alt="Estudante do ADS" style="width: 50px">
-          <h3 class="project-title">Estudante de ADS</h3>
-          <p class="project-desc">Estudo na FATEC, no último ano. Sou formado em Técnico em Desenvolvimento de Sistemas
-            pela ETEC.</p>
-          <p class="project-tech">Gestão de Equipes e Projetos · Desenvolvimento</p>
-          <a href="#" class="project-link open-modal" data-modal-target="#modal-student">Saiba mais</a>
+          <h3 class="project-title" data-lang="card_student_titulo">Estudante de ADS</h3>
+          <p class="project-desc" data-lang="card_student_desc">Estudo na FATEC, no último ano. Sou formado em Técnico
+            em Desenvolvimento de Sistemas pela ETEC.</p>
+
+          <p class="project-tech" data-lang="tech_student">Gestão de Equipes e Projetos · Desenvolvimento</p>
+
+          <a href="#" class="project-link open-modal" data-modal-target="#modal-student"
+            data-lang="link_saiba_mais">Saiba mais</a>
         </div>
+
         <div class="project-card">
           <img src="img/suporte-tecnico (1).png" alt="Analista de HelpDesk" style="width: 50px">
-          <h3 class="project-title">Analista de HelpDesk</h3>
-          <p class="project-desc">Trabalho atualmente respondendo chamados, garantindo a qualidade da experiência do
-            cliente.</p>
-          <p class="project-tech">Gestão de Chamados N1 · Atendimento ao Cliente</p>
-          <a href="#" class="project-link open-modal" data-modal-target="#modal-helpdesk">Saiba mais</a>
+          <h3 class="project-title" data-lang="card_hd_titulo">Analista de HelpDesk</h3>
+          <p class="project-desc" data-lang="card_hd_desc">Trabalho atualmente respondendo chamados, garantindo a
+            qualidade da experiência do cliente.</p>
+
+          <p class="project-tech" data-lang="tech_hd">Gestão de Chamados N1 · Atendimento ao Cliente</p>
+
+          <a href="#" class="project-link open-modal" data-modal-target="#modal-helpdesk"
+            data-lang="link_saiba_mais">Saiba mais</a>
         </div>
+
       </div>
     </div>
   </section>
@@ -104,36 +147,40 @@
   <div id="modal" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <h1 style="color: black;">Portfólio: Analista de Testes</h1>
-      <p style="color: black; font-size: 1.6rem;">Como Analista de Testes, foco em garantir a qualidade do software
-        através de testes manuais e automação. Utilizo ferramentas como Selenium e JUnit para criar testes robustos e
-        confiáveis.</p>
+      <h1 style="color: black;" data-lang="modal_qa_titulo">Portfólio: Analista de Testes</h1>
+      <p style="color: black; font-size: 1.6rem;" data-lang="modal_qa_desc">Como Analista de Testes, foco em garantir a
+        qualidade do software através de testes manuais e automação. Utilizo ferramentas como Selenium e JUnit para
+        criar testes robustos e confiáveis.</p>
       <div class="modal-gallery"><img src="img/alocacao-de-recursos.png" alt="Relatório de Testes"></div>
     </div>
   </div>
+
   <div id="modal-dev" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <h1 style="color: black;">Portfólio: Desenvolvedor</h1>
-      <p style="color: black; font-size: 1.6rem;">Detalhes sobre projetos de desenvolvimento, Java e SpringBoot, e
-        exemplos de código ou links para repositórios.</p>
+      <h1 style="color: black;" data-lang="modal_dev_titulo">Portfólio: Desenvolvedor</h1>
+      <p style="color: black; font-size: 1.6rem;" data-lang="modal_dev_desc">Detalhes sobre projetos de desenvolvimento,
+        Java e SpringBoot, e exemplos de código ou links para repositórios.</p>
       <div class="modal-gallery"><img src="img/pngwing.com (4).png" alt="Desenvolvimento"></div>
     </div>
   </div>
+
   <div id="modal-student" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <h1 style="color: black;">Portfólio: Estudante de ADS</h1>
-      <p style="color: black; font-size: 1.6rem;">Jornada acadêmica na FATEC Rubens Lara...</p>
+      <h1 style="color: black;" data-lang="modal_student_titulo">Portfólio: Estudante de ADS</h1>
+      <p style="color: black; font-size: 1.6rem;" data-lang="modal_student_desc">Jornada acadêmica na FATEC Rubens
+        Lara...</p>
       <div class="modal-gallery"><img src="img/programador.png" alt="Estudante"></div>
     </div>
   </div>
+
   <div id="modal-helpdesk" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <h1 style="color: black;">Portfólio: Analista de HelpDesk</h1>
-      <p style="color: black; font-size: 1.6rem;">Experiência com suporte ao cliente, resolução de problemas e garantia
-        da qualidade da experiência do usuário.</p>
+      <h1 style="color: black;" data-lang="modal_hd_titulo">Portfólio: Analista de HelpDesk</h1>
+      <p style="color: black; font-size: 1.6rem;" data-lang="modal_hd_desc">Experiência com suporte ao cliente,
+        resolução de problemas e garantia da qualidade da experiência do usuário.</p>
       <div class="modal-gallery"><img src="img/suporte-tecnico (1).png" alt="HelpDesk"></div>
     </div>
   </div>
@@ -141,7 +188,7 @@
   <section class="projects" id="trajetoria">
 
     <div class="projects-side-bar-left coluna-menor" id="trajetoria-menor">
-      <h2 style="margin-bottom: 2rem;">Educação</h2>
+      <h2 style="margin-bottom: 2rem;" data-lang="titulo_educacao">Educação</h2>
 
       <div class="timeline">
 
@@ -149,21 +196,21 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2023 - 2026</div>
           <div class="timeline-content">
-            <h3>Tecnólogo em Análise e Des. de Sistemas</h3>
+            <h3 data-lang="edu_fatec_curso">Tecnólogo em Análise e Des. de Sistemas</h3>
             <h4>FATEC Rubens Lara - Santos/SP</h4>
-            <p>
+            <p data-lang="edu_fatec_desc">
               Ensino superior focado em Engenharia de Software, Gestão de Projetos e Programação (Java/Spring). Foram
               realizados diversos projetos utilizando metodologias do mercado atuais, utilizando soluções existentes
               para resolver problemas.
             </p>
             <div class="timeline-tags">
-              <span><b>Presencial</b></span>
+              <span data-lang="tag_presencial"><b>Presencial</b></span>
               <span>Java</span>
               <span>Python</span>
               <span>Scrum</span>
-              <span>Gestão de Projetos</span>
-              <span>Linguagem C</span>
-              <span>Estrutura de Dados</span>
+              <span data-lang="tag_gestao_projetos">Gestão de Projetos</span>
+              <span>C</span>
+              <span data-lang="tag_estrutura_dados">Estrutura de Dados</span>
             </div>
           </div>
         </div>
@@ -172,19 +219,19 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2022 - 2023</div>
           <div class="timeline-content">
-            <h3>Técnico em Desenvolvimento de Sistemas</h3>
+            <h3 data-lang="edu_etec_curso">Técnico em Desenvolvimento de Sistemas</h3>
             <h4>ETEC Doutora Ruth Cardoso - São Vicente/SP</h4>
-            <p>
+            <p data-lang="edu_etec_desc">
               Base técnica em lógica de programação e banco de dados. No curso, foram desenvolvidos diversos projetos
               utilizando linguagens de programação, resolvendo problemas comuns no mercado em exercícios.
             </p>
             <div class="timeline-tags">
-              <span><b>Presencial</b></span>
+              <span data-lang="tag_presencial"><b>Presencial</b></span>
               <span>PHP</span>
               <span>C#</span>
               <span>Design Digital</span>
               <span>MySQL</span>
-              <span>Lógica de Programação</span>
+              <span data-lang="tag_logica_programacao">Lógica de Programação</span>
             </div>
           </div>
         </div>
@@ -193,63 +240,63 @@
     </div>
 
     <div class="projects-side-bar-right coluna-maior" id="trajetoria-maior">
-      <h2 style="margin-bottom: 2rem;">Experiência Profissional</h2>
+      <h2 style="margin-bottom: 2rem;" data-lang="titulo_xp_profissional">Experiência Profissional</h2>
 
       <div class="timeline">
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date"><b>Ago/2025 - Atualmente</b></div>
+          <div class="timeline-date"><b data-lang="data_ago_atual">Ago/2025 - Atualmente</b></div>
           <div class="timeline-content">
-            <h3>Analista de HelpDesk</h3>
+            <h3 data-lang="xp_soc_analista">Analista de HelpDesk</h3>
             <h4>SOC - Age Desenvolvimento de Sistemas</h4>
-            <p>
+            <p data-lang="xp_soc_analista_desc">
               Responsável pela análise aprofundada de erros sistêmicos e validação de regras de negócio conforme
               documentação. Atuo também na execução de testes de novas funcionalidades em dias de atualizações,
               fornecendo feedback direto ao time de desenvolvimento e garantindo a qualidade das entregas. Realizo
               também, treinamentos para os usuários finais do software e consultorias quando necessário.
             </p>
             <div class="timeline-tags">
-              <span>Mapeamento de Erros</span>
-              <span>Treinamento para Clientes</span>
-              <span>Testes de Software</span>
+              <span data-lang="tag_map_erros">Mapeamento de Erros</span>
+              <span data-lang="tag_treinamento">Treinamento para Clientes</span>
+              <span data-lang="tag_testes">Testes de Software</span>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Jul/2024 - Jul/2025</div>
+          <div class="timeline-date" data-lang="data_jul_24_25">Jul/2024 - Jul/2025</div>
           <div class="timeline-content">
-            <h3>Assistente de HelpDesk</h3>
+            <h3 data-lang="xp_soc_assistente">Assistente de HelpDesk</h3>
             <h4>SOC - Age Desenvolvimento de Sistemas</h4>
-            <p>
+            <p data-lang="xp_soc_assistente_desc">
               Atuação focada no atendimento ao cliente e suporte na resolução de chamados. Realizei escalonamento de
               tickets para o time de Desenvolvimento em casos de BUGs, e atualizações da documentação quando necessário.
             </p>
             <div class="timeline-tags">
-              <span>Suporte N1</span>
-              <span>Resolução de Chamados</span>
-              <span>Atendimento</span>
+              <span data-lang="tag_suporte_n1">Suporte N1</span>
+              <span data-lang="tag_resolucao">Resolução de Chamados</span>
+              <span data-lang="tag_atendimento">Atendimento</span>
             </div>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-date">Out/2023 - Jun/2024</div>
+          <div class="timeline-date" data-lang="data_out_jun">Out/2023 - Jun/2024</div>
           <div class="timeline-content">
-            <h3>Estagiário - Relacionamento e Negócios</h3>
+            <h3 data-lang="xp_soc_estagio">Estagiário - Relacionamento e Negócios</h3>
             <h4>SOC - Age Desenvolvimento de Sistemas</h4>
-            <p>
+            <p data-lang="xp_soc_estagio_desc">
               Início da jornada na empresa, com foco no aprendizado das regras de negócio e relacionamento com clientes.
               Desenvolvimento de soft skills essenciais e entendimento do ecossistema do software SOC SST.
             </p>
             <div class="timeline-tags">
-              <span>Relacionamento</span>
+              <span data-lang="tag_relacionamento">Relacionamento</span>
               <span>Software SOC</span>
-              <span>Negócios</span>
-              <span>Comunicação e Flexibidade</span>
+              <span data-lang="tag_negocios">Negócios</span>
+              <span data-lang="tag_comunicacao">Comunicação e Flexibidade</span>
             </div>
           </div>
         </div>
@@ -258,16 +305,16 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2023</div>
           <div class="timeline-content">
-            <h3>Auxiliar Técnico TI</h3>
+            <h3 data-lang="xp_fortec">Auxiliar Técnico TI</h3>
             <h4>FORTEC / FATEF</h4>
-            <p>
+            <p data-lang="xp_fortec_desc">
               Suporte técnico abrangente a softwares e hardwares, incluindo manutenção de redes e equipamentos. Atuei
               também na automatização de processos manuais, otimizando a rotina interna da instituição.
             </p>
             <div class="timeline-tags">
-              <span>Infraestrutura</span>
-              <span>Redes</span>
-              <span>Automação</span>
+              <span data-lang="tag_infra">Infraestrutura</span>
+              <span data-lang="tag_redes">Redes</span>
+              <span data-lang="tag_automacao">Automação</span>
               <span>Hardware</span>
             </div>
           </div>
@@ -277,16 +324,16 @@
           <div class="timeline-dot"></div>
           <div class="timeline-date">2020 - 2022</div>
           <div class="timeline-content">
-            <h3>Aprendiz de Suporte de TI</h3>
+            <h3 data-lang="xp_btp">Aprendiz de Suporte de TI</h3>
             <h4>Brasil Terminal Portuário (BTP)</h4>
-            <p>
+            <p data-lang="xp_btp_desc">
               Primeira experiência profissional em TI. Responsável pela preparação e instalação de equipamentos
               (computadores, coletores, rádios), gestão de usuários e suporte direto aos colaboradores.
             </p>
             <div class="timeline-tags">
               <span>Hardware</span>
-              <span>Gestão de Acessos</span>
-              <span>Suporte Técnico</span>
+              <span data-lang="tag_gestao_acessos">Gestão de Acessos</span>
+              <span data-lang="tag_suporte">Suporte Técnico</span>
             </div>
           </div>
         </div>
@@ -296,72 +343,72 @@
   </section>
 
   <section class="certifications" id="certificacoes">
-    <h2 class="section-title">Mural de <span style="color: var(--cor-fonte);">Certificações e Cursos</span></h2>
-
+    <h2 class="section-title" data-lang="titulo_certificacoes_completo">Mural de Certificações e Cursos</h2>
     <div class="carousel-container">
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
         <h3>AZ-900: Azure Fundamentals</h3>
         <p>Microsoft</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fas fa-bug"></i></div>
         <h3>QA: WebDriver & Selenium</h3>
         <p>Udemy</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fab fa-java"></i></div>
         <h3>Trilha Java</h3>
         <p>Alura</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fas fa-users-cog"></i></div>
         <h3>Metodologia Ágil SCRUM</h3>
         <p>Alura</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fas fa-code"></i></div>
         <h3>Linguagem C#</h3>
         <p>Fundação Bradesco</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fas fa-clipboard-check"></i></div>
         <h3>QA: Plano de Testes e Bugs</h3>
         <p>Alura</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
       <div class="cert-card">
         <div class="cert-icon"><i class="fas fa-file-excel"></i></div>
         <h3>Excel Básico & Office 365</h3>
         <p>Universidade BTP</p>
-        <span class="cert-status">Concluído</span>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
       </div>
 
     </div>
 
-    <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> Arraste para o lado</p>
+    <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> <span data-lang="arraste_lado">Arraste para o lado</span>
+    </p>
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
-    <p>Conteúdo da seção de experiências profissionais.</p>
+    <h2 data-lang="titulo_exp_placeholder">Experience</h2>
+    <p data-lang="desc_exp_placeholder">Conteúdo da seção de experiências profissionais.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Conteúdo da seção de contato.</p>
+    <h2 data-lang="titulo_contato_placeholder">Contact</h2>
+    <p data-lang="desc_contato_placeholder">Conteúdo da seção de contato.</p>
   </section>
 
   <script src="javascript.js"></script>
