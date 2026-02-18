@@ -517,6 +517,179 @@ body.cor-dourada {
     transition: color 0.3s ease;
 }
 
+/* --- ESTILOS ESPECÍFICOS DO MODAL QA --- */
+
+/* Título com a barra dourada lateral */
+.modal-header-styled {
+    color: #222;
+    border-left: 5px solid var(--cor-fonte-dourado);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 2.4rem; /* Ajuste conforme necessário */
+}
+
+/* Texto de introdução */
+.modal-intro {
+    color: #555;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Títulos das seções internas (H3) */
+.modal-section-title {
+    color: var(--cor-fonte); /* Azul do seu tema */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- CARDS DE TECNOLOGIA (Java, Selenium, JUnit) --- */
+.tech-stack-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.tech-card {
+    flex: 1;
+    min-width: 140px;
+    background: #f4f4f4; /* Fundo cinza claro */
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-3px); /* Leve efeito ao passar o mouse */
+}
+
+.tech-card i {
+    font-size: 3rem;
+}
+
+.tech-info strong {
+    color: #333;
+    font-size: 1.4rem;
+    display: block;
+}
+
+.tech-info span {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Cores específicas para cada ferramenta */
+.tech-card.java {
+    border-bottom: 3px solid #e67e22; /* Laranja Java */
+}
+.tech-card.java i { color: #e67e22; }
+
+.tech-card.selenium {
+    border-bottom: 3px solid #43B02A; /* Verde Selenium */
+}
+.tech-card.selenium i { color: #43B02A; }
+
+.tech-card.junit {
+    border-bottom: 3px solid #C12127; /* Vermelho JUnit */
+}
+.tech-card.junit i { color: #C12127; }
+
+
+/* --- CARDS DE CONCEITOS (Regressão, Caixa Preta) --- */
+.concepts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.concept-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.concept-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.concept-card h4 {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.concept-card h4 i {
+    color: var(--cor-fonte); /* Azul do tema */
+}
+
+.concept-card p {
+    color: #666;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Ajuste na imagem da galeria do modal */
+.modal-gallery img {
+    max-height: 250px; /* Limita a altura para não estourar */
+    object-fit: contain; /* Garante que a imagem apareça inteira */
+    width: 100%;
+}
+
+/* --- CORREÇÃO GERAL DE VISIBILIDADE DOS ÍCONES NOS MODAIS --- */
+
+/* 1. Títulos das Seções (Ex: Ferramentas, Competências) */
+.modal-section-title i {
+    color: var(--cor-fonte); /* Usa o azul/dourado do seu tema */
+}
+
+/* 2. Ícones dentro dos Cards de Tecnologia e Conceitos */
+/* Isso garante que eles fiquem visíveis (cinza escuro) mesmo se a cor específica falhar */
+.tech-card i,
+.concept-card h4 i {
+    color: #333 !important; /* !important garante que sobrescreva o branco do tema global */
+}
+
+/* --- REAPLICANDO AS CORES ESPECÍFICAS (PARA GARANTIR) --- */
+/* O !important aqui garante que a cor específica vença o cinza escuro acima */
+
+/* MODAL DEV (Java & Spring) */
+.tech-card.java i { color: #e67e22 !important; }   /* Laranja Java */
+.tech-card.spring i { color: #6DB33F !important; } /* Verde Spring */
+.tech-card.mysql i { color: #00758F !important; }  /* Azul MySQL */
+.tech-card.poo i { color: #9b59b6 !important; }    /* Roxo OO */
+.tech-card.api i { color: #2980b9 !important; }    /* Azul API */
+
+/* MODAL STUDENT (FATEC) */
+.tech-card.dev-academic i { color: #B22222 !important; }  /* Vermelho */
+.tech-card.eng-academic i { color: #555 !important; }     /* Cinza */
+.tech-card.mgmt-academic i { color: #6c5ce7 !important; } /* Roxo */
+
+/* MODAL HELPDESK (Suporte) */
+.tech-card.analysis i { color: #e67e22 !important; }      /* Laranja */
+.tech-card.tickets i { color: #8e44ad !important; }       /* Roxo */
+.tech-card.tests-support i { color: #2ecc71 !important; } /* Verde */
+.tech-card.sql-support i { color: #F29111 !important; }   /* Laranja SQL (se ainda usar) */
+.tech-card.docs i { color: #1abc9c !important; }          /* Turquesa (se ainda usar) */
+
+/* MODAL QA */
+.tech-card.selenium i { color: #43B02A !important; }
+.tech-card.junit i { color: #C12127 !important; }
+
 /* --- TRAJETÓRIA (TIMELINE) - LADO A LADO --- */
 
 /* Configuração do container pai para alinhamento horizontal */
