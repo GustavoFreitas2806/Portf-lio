@@ -594,3 +594,43 @@ if (langSelector) {
     }
   });
 }
+
+// --- 4. LÓGICA DO CARROSSEL (PROJETO DESTAQUE) ---
+let slideIndex = 0;
+const slides = document.querySelectorAll('.bento-carousel .slide');
+const dots = document.querySelectorAll('.bento-carousel .dot');
+
+function showSlides(n) {
+    if (!slides.length) return; // Evita erro se a seção for removida no futuro
+    
+    slideIndex = n;
+    
+    // Cria o Loop Infinito (Se passar da última foto, volta pra primeira)
+    if (slideIndex >= slides.length) { slideIndex = 0; }
+    if (slideIndex < 0) { slideIndex = slides.length - 1; }
+    
+    // Esconde todas as imagens e desmarca as bolinhas
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Mostra a imagem atual e acende a bolinha correspondente
+    slides[slideIndex].classList.add('active');
+    dots[slideIndex].classList.add('active');
+}
+
+// Função para os botões Previous / Next
+function moveSlide(n) {
+    showSlides(slideIndex + n);
+}
+
+// Função para clicar diretamente na bolinha
+function currentSlide(n) {
+    showSlides(n);
+}
+
+// Autoplay: Troca a foto automaticamente a cada 4 segundos
+setInterval(() => {
+    if(slides.length > 0) {
+        moveSlide(1);
+    }
+}, 4000);

@@ -938,6 +938,395 @@ body.cor-dourada {
     animation: fadePulse 2s infinite;
 }
 
+/* --- SEÇÃO DESTAQUE "BANNER FULL-WIDTH" (CORRIGIDO) --- */
+
+.bento-section {
+    /* HERANÇA: As mesmas regras que você usa em .projects e .certifications */
+    background-color: var(--cor-background);
+    padding: 8rem 9% 5rem;
+    color: white;
+    text-align: center;
+    border-radius: 40px; /* Bordas arredondadas padrão do seu site */
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem; /* Espaçamento entre seções */
+}
+
+/* Container que segura o Grid e trava a largura para ficar alinhado com o site */
+.bento-container-inner {
+    width: 100%;
+    max-width: 1200px; /* Alinha com as colunas do "Sobre mim" */
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    width: 100%;
+}
+
+/* Estilo Base das Caixas (Os "cards" pequenos de baixo) */
+.bento-item {
+    background: var(--cor--gradiente);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-fonte-dourado);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* 1. O "PALCO" (Container Gigante) */
+.bento-img-large {
+    grid-column: 1 / -1; 
+    height: 600px; 
+    padding: 0; 
+    border: none;
+    border-radius: 20px; 
+    background-color: #050505; /* Fundo quase preto */
+    /* Sombra interna para dar a sensação de que o fundo é "fundo" de verdade */
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.9);
+}
+
+.bento-img-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bento-img-content::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.bento-img-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.8s ease;
+}
+
+.bento-img-large:hover .bento-img-content img {
+    transform: scale(1.02); 
+}
+
+.bento-badge {
+    position: absolute;
+    bottom: 30px; 
+    left: 30px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--cor-fonte-dourado);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid var(--cor-fonte-dourado);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 2. Texto Principal */
+.bento-text-main {
+    grid-column: span 2; 
+    border-top: 4px solid var(--cor-fonte-dourado); 
+    background: rgba(255, 255, 255, 0.03); 
+    justify-content: flex-start;
+}
+
+.bento-text-main h3 {
+    font-size: 3.2rem; 
+    color: var(--cor-fonte-dourado);
+    margin-bottom: 1.5rem;
+}
+
+.bento-text-main p {
+    font-size: 1.5rem;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+/* 3. Destaque QA */
+.bento-qa-box {
+    grid-column: span 1; 
+    background: linear-gradient(135deg, rgba(41, 128, 185, 0.15), transparent);
+    border: 1px solid rgba(41, 128, 185, 0.3);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.bento-qa-box i {
+    font-size: 3rem;
+    color: var(--cor-fonte);
+    margin-bottom: 1.5rem;
+    background: rgba(41, 128, 185, 0.2);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.bento-qa-box h4 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.bento-qa-box p {
+    font-size: 1.4rem;
+    color: #bbb;
+    margin: 0;
+}
+
+/* 4. Tech Stack */
+.bento-tech-stack {
+    grid-column: span 1; 
+    text-align: center;
+    align-items: center;
+}
+
+.bento-tech-stack h4 {
+    font-size: 1.6rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.bento-tech-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 3.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bento-tech-icons i { transition: transform 0.3s; color: white; }
+.bento-tech-icons i:hover { transform: scale(1.2); }
+.fab.fa-html5 { color: #e34f26; }
+.fab.fa-css3-alt { color: #2965f1; }
+.fab.fa-js { color: #f7df1e; }
+.fab.fa-bootstrap { color: #7952b3; }
+
+
+/* 5. Ações/Botões */
+.bento-actions {
+    grid-column: 1 / -1; 
+    flex-direction: row;
+    justify-content: center; 
+    gap: 2rem;
+    padding: 1rem 0; 
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.bento-item.bento-actions:hover { transform: none; box-shadow: none; border-color: transparent; }
+
+.bento-btn {
+    padding: 1.2rem 3.5rem;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bento-btn.primary {
+    background: var(--cor-fonte-dourado);
+    color: black;
+    border: 2px solid var(--cor-fonte-dourado);
+}
+
+.bento-btn.primary:hover {
+    background: transparent;
+    color: var(--cor-fonte-dourado);
+    box-shadow: 0 0 25px rgba(230, 126, 34, 0.4);
+}
+
+.bento-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.bento-btn.secondary:hover {
+    border-color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+/* --- CARROSSEL BENTO GRID (PROJETO DESTAQUE) --- */
+
+.bento-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px; /* Herda o arredondamento suave do container */
+}
+
+.carousel-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 2. A CAIXA DO SLIDE (Segura o fundo e a imagem) */
+.carousel-slides .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0; 
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que o borrão não vaze */
+}
+
+/* Slide visível */
+.carousel-slides .slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 3. O FUNDO DESFOCADO (Preenche a horizontal completa) */
+.slide-blur-bg {
+    position: absolute;
+    /* Faz o fundo passar um pouco das bordas para o desfoque não falhar no canto */
+    top: -10%; left: -10%;
+    width: 120%; height: 120%;
+    background-size: cover;
+    background-position: center;
+    /* Aqui está a mágica: muito desfoque e um pouco escuro para destacar a foto real */
+    filter: blur(25px) brightness(0.4); 
+    z-index: 0;
+}
+
+/* 4. A IMAGEM FLUTUANTE (100% visível no meio, com 3D) */
+.carousel-slides .slide img {
+    position: relative;
+    z-index: 1;
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; /* Garante que as fotos não sejam cortadas */
+    filter: drop-shadow(0px 20px 40px rgba(0,0,0,0.9)); /* O efeito de profundidade */
+    transition: transform 4s ease-out; 
+    transform: scale(0.96); /* Começa um pouco recuada */
+}
+
+/* O movimento de profundidade quando a imagem entra na tela */
+.carousel-slides .slide.active img {
+    transform: scale(1.02); /* Vem sutilmente para a frente */
+}
+
+/* Degradê escuro por cima das fotos */
+.carousel-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    z-index: 2;
+    pointer-events: none; /* Garante que os cliques passem reto pelo fundo escuro */
+}
+
+/* --- Botões de Navegação (Setas) --- */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.carousel-control:hover {
+    background: var(--cor-fonte-dourado);
+    color: black;
+    border-color: var(--cor-fonte-dourado);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev { left: 20px; }
+.carousel-control.next { right: 20px; }
+
+/* --- Indicadores (Bolinhas inferiores) --- */
+.carousel-indicators {
+    position: absolute;
+    bottom: 25px; /* Fica alinhado com a Badge */
+    right: 30px;  /* Joguei para a direita para não bater na Badge */
+    z-index: 3;
+    display: flex;
+    gap: 12px;
+}
+
+.carousel-indicators .dot {
+    width: 12px; height: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .dot.active,
+.carousel-indicators .dot:hover {
+    background: var(--cor-fonte-dourado);
+    box-shadow: 0 0 10px var(--cor-fonte-dourado);
+    transform: scale(1.2);
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .bento-img-large, 
+    .bento-text-main, 
+    .bento-qa-box, 
+    .bento-tech-stack, 
+    .bento-actions {
+        grid-column: 1 / -1; 
+    }
+
+    .bento-img-large {
+        height: 400px; 
+    }
+
+    .bento-actions {
+        flex-direction: column;
+    }
+}
+
 @keyframes fadePulse {
     0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
