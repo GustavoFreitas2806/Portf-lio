@@ -692,32 +692,30 @@ body.cor-dourada {
 
 /* --- TRAJETÓRIA (TIMELINE) - LADO A LADO --- */
 
-/* Configuração do container pai para alinhamento horizontal */
+/* --- TRAJETÓRIA (TIMELINE) - LADO A LADO --- */
+
+/* Agora herda o alinhamento idêntico ao "Sobre Mim" */
 #trajetoria {
     display: flex;
     justify-content: center; 
-    align-items: stretch; /* Garante alturas iguais */
-    gap: 2rem;
-    flex-wrap: wrap; 
+    align-items: stretch;
 }
 
 /* COLUNA ESQUERDA (EDUCAÇÃO) - Menor */
 #trajetoria #trajetoria-menor {
-    width: 32%; /* Largura calculada para caber */
-    margin: 0;
-    padding: 30px; 
     display: flex;
     flex-direction: column;
+    /* Removido o width fixo. Agora herda automaticamente os 40% da coluna de cima */
 }
 
 /* COLUNA DIREITA (PROFISSIONAL) - Maior */
 #trajetoria #trajetoria-maior {
-    width: 62%; /* Largura calculada para caber */
-    margin: 0;
-    padding: 30px 30px 30px 40px;
     display: flex;
     flex-direction: column;
+    /* Removido o width fixo. Agora herda automaticamente os 90% da coluna de cima */
 }
+
+
 
 /* Container da Linha do Tempo */
 .timeline {
@@ -841,7 +839,7 @@ body.cor-dourada {
 .certifications {
     text-align: center;
     background-color: var(--cor-background);
-    padding: 8rem 9% 5rem;
+    padding: 1rem 9% 5rem;
     border-radius: 40px; 
     margin: 1rem 0rem;
 }
@@ -855,11 +853,20 @@ body.cor-dourada {
 }
 
 /* Container do Scroll Horizontal */
+/* Container Principal (Desktop: Carrossel Horizontal) */
 .carousel-container {
     display: flex;
-    overflow-x: auto;
-    gap: 2rem;
-    padding: 2rem 5%;
+    flex-wrap: nowrap; 
+    overflow-x: auto;  
+    justify-content: flex-start; 
+    gap: 2.5rem;
+    padding: 2rem 10px; 
+    
+    /* A MÁGICA ESTÁ AQUI: Substituímos o 1200px por 100% */
+    width: 100%;
+    max-width: 100%; /* Agora ele cresce até o limite máximo da tela */
+    
+    margin: 0 auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
@@ -1304,6 +1311,303 @@ body.cor-dourada {
     transform: scale(1.2);
 }
 
+/* --- CASE DE SUCESSO: TECH FOUR (CARDS) --- */
+
+.techfour-showcase {
+    width: 100%;
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    text-align: center;
+}
+
+.tf-header h3 {
+    font-size: 2.8rem;
+    color: var(--cor-fonte-dourado);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.tf-header h3 i {
+    color: var(--cor-fonte);
+}
+
+.tf-header p {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 4rem;
+}
+
+.tf-cards-grid {
+    display: grid;
+    /* Cria quantas colunas couberem, com no mínimo 250px cada */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding: 0 15px;
+}
+
+.tf-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.2) 100%);
+    border: 1px solid rgba(255,255,255,0.05);
+    /* Borda superior de destaque (Azul padrão) */
+    border-top: 4px solid var(--cor-fonte);
+    border-radius: 15px;
+    padding: 3rem 2.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tf-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(41, 128, 185, 0.2);
+    /* Ao passar o mouse, a borda vira dourada */
+    border-top-color: var(--cor-fonte-dourado);
+}
+
+.tf-card i {
+    font-size: 3.5rem;
+    color: var(--cor-fonte);
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.tf-card:hover i {
+    color: var(--cor-fonte-dourado);
+}
+
+.tf-card h4 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.tf-card p {
+    font-size: 1.4rem;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* --- TERMINAL ACADÊMICO (CRIATIVO) --- */
+.academic-terminal {
+    background-color: #121212;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 4rem;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace; /* Fonte de código */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.academic-terminal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(41, 128, 185, 0.3); /* Brilho azul tecnológico */
+}
+
+.terminal-header {
+    background-color: #2d2d2d;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #111;
+    position: relative;
+}
+
+.term-buttons {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    left: 15px;
+}
+
+.term-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.term-btn.close { background-color: #ff5f56; }
+.term-btn.min { background-color: #ffbd2e; }
+.term-btn.max { background-color: #27c93f; }
+
+.term-title {
+    width: 100%;
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.terminal-body {
+    padding: 2rem;
+    color: #e0e0e0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.term-line {
+    margin-bottom: 0.5rem;
+}
+
+.term-line.mt-2 {
+    margin-top: 2rem;
+}
+
+.term-prompt {
+    color: #27c93f; /* Verde clássico de terminal */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.term-command {
+    color: white;
+}
+
+.term-line.output {
+    color: #aaa;
+}
+
+/* Estilização do bloco JSON falso */
+.term-line.json {
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+    border-left: 2px solid #555;
+    font-family: monospace;
+    white-space: pre-wrap; /* MÁGICA: Permite quebrar a linha no celular */
+    word-break: break-word; /* Força palavras muito longas a quebrarem se necessário */
+}
+
+.json-key { color: #ff7b72; } /* Cor para chaves JSON */
+.json-string { color: #a5d6ff; } /* Cor para valores JSON */
+
+/* Animação do Cursor Piscando */
+.term-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #fff;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+
+/* --- LIGHTBOX (IMAGEM EM TELA CHEIA) --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92); /* Fundo quase 100% preto */
+    display: none; /* Escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Fica acima do Menu e dos Modais */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Quando ativado pelo JavaScript */
+.lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90vh; /* Não deixa a imagem vazar da altura da tela */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    transform: scale(0.8); /* Começa menor */
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-img {
+    transform: scale(1); /* Efeito de Zoom In ao abrir */
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--cor-fonte-dourado);
+    transform: scale(1.1);
+}
+
+
+/* --- VÍDEOS RESPONSIVOS (YOUTUBE) NO MODAL --- */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Essa é a mágica para forçar a proporção exata de 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Deixa as pontinhas do vídeo arredondadas para combinar com o card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Uma sombra leve para destacar o player */
+    background-color: #000; /* Fundo preto enquanto o vídeo carrega */
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Faz o mouse virar uma "lupa" ou "mãozinha" nas imagens da galeria indicando que dá para clicar */
+.modal-gallery img {
+    cursor: zoom-in;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- RESPONSIVIDADE DO TERMINAL (MOBILE) --- */
+@media (max-width: 768px) {
+    .academic-terminal {
+        margin-top: 2rem;
+    }
+    
+    .terminal-body {
+        padding: 1.5rem;
+        font-size: 1.2rem; /* Diminui a fonte do código para caber melhor na tela */
+    }
+    
+    .term-title {
+        font-size: 1rem;
+    }
+    
+    .term-line.json {
+        padding-left: 1rem; /* Reduz o espaço lateral no celular */
+    }
+}
+
+/* Responsividade Mobile para os Cards */
+@media (max-width: 768px) {
+    .tf-header h3 {
+        font-size: 2.2rem;
+    }
+    .tf-card {
+        text-align: center; /* Centraliza no celular */
+    }
+}
+
+
+
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 1024px) {
     .bento-grid {
@@ -1324,6 +1628,19 @@ body.cor-dourada {
 
     .bento-actions {
         flex-direction: column;
+    }
+
+    /* BLINDAGEM DO MOBILE: Força a seção a voltar ao tamanho normal e tira o espaço em branco */
+    .certifications {
+        display: block !important; /* Quebra a centralização flex */
+        min-height: 0 !important; /* MATA a tela inteira (100vh) que cria o buraco */
+        height: auto !important; /* A altura será apenas o tamanho dos cards */
+        padding: 1rem 5% 5rem !important; /* Diminui o respiro pra colar na seção de cima */
+        margin-top: 1rem !important;
+    }
+
+    .carousel-container {
+        padding: 2rem 0 !important; /* Permite que o carrossel vá até a borda da tela do celular */
     }
 }
 
@@ -1555,5 +1872,280 @@ body.cor-dourada {
     }
     81%, 100% {
         content: "Analista de HelpDesk";
+    }
+}
+
+/* --- FOOTER TECH & CONTATO --- */
+.tech-footer {
+    background: linear-gradient(to bottom, var(--cor-background) 0%, #0a0a0a 100%);
+    padding: 8rem 5% 2rem;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+/* Marca e E-mail */
+.footer-brand {
+    flex: 1;
+    max-width: 500px;
+}
+
+.footer-brand h2 {
+    font-size: 3.5rem;
+    color: var(--cor-fonte-dourado);
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand p {
+    font-size: 1.6rem;
+    color: #aaa;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Botão de E-mail estilo API */
+.api-email-btn {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.api-email-btn:hover {
+    border-color: var(--cor-fonte);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(41, 128, 185, 0.2);
+}
+
+.api-email-btn .method {
+    color: #27c93f; /* Verde de sucesso/POST */
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+}
+
+.api-email-btn .endpoint {
+    color: white;
+    font-family: monospace;
+    font-size: 1.4rem;
+    margin-right: 2rem;
+}
+
+.api-email-btn i {
+    color: var(--cor-fonte-dourado);
+    font-size: 1.6rem;
+}
+
+/* Redes Sociais */
+.footer-social {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-social h4 {
+    font-size: 1.4rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    font-family: monospace;
+}
+
+.social-grid {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-box i {
+    font-size: 2.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-box span {
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.social-box:hover {
+    background: rgba(41, 128, 185, 0.1);
+    border-color: var(--cor-fonte);
+    transform: translateY(-5px);
+}
+
+.social-box:hover i, .social-box:hover span {
+    color: var(--cor-fonte);
+}
+
+/* Divisor e Base do Footer */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    margin-bottom: 3rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-code code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    color: #888;
+}
+
+.code-keyword { color: #ff7b72; } /* Cor rosa/vermelha comum em IDEs para "return" */
+.code-string { color: #a5d6ff; } /* Azul claro para strings */
+.footer-code i { color: #d35400; } /* Cor de café pro ícone */
+
+.footer-copy {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+/* --- RESPONSIVIDADE FOOTER (MOBILE) --- */
+@media (max-width: 900px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+    
+    .footer-brand h2 {
+        font-size: 2.8rem;
+    }
+
+    .footer-social {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .social-grid {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .social-box {
+        flex: 1; /* Estica os botões para preencher a tela */
+        height: 80px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .api-email-btn {
+        width: 100%;
+        justify-content: space-between; /* Melhor espaçamento no celular */
+    }
+}
+
+/* --- STATUS DO SERVIDOR (EASTER EGG) --- */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Garante que não quebre no celular */
+    gap: 2rem;
+}
+
+.server-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    color: #888;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.server-status:hover {
+    background: rgba(39, 201, 63, 0.05);
+    border-color: rgba(39, 201, 63, 0.3);
+    color: #27c93f;
+    cursor: default;
+}
+
+/* A bolinha verde do servidor */
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #27c93f; 
+    border-radius: 50%;
+    /* A animação de pulso */
+    animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+    0% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(39, 201, 63, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
+}
+
+/* Agrupamento do lado direito (Código + Direitos) */
+.footer-info-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.bento-btn span {
+    color: inherit !important;
+}
+
+/* Responsividade Mobile para o Bottom */
+@media (max-width: 900px) {
+    .footer-bottom {
+        flex-direction: column-reverse; /* Coloca o status acima no celular */
+        text-align: center;
+    }
+    .footer-info-right {
+        text-align: center;
     }
 }
