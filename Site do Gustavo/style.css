@@ -2139,6 +2139,10 @@ body.cor-dourada {
     color: inherit !important;
 }
 
+.tf-header span {
+    color: var(--cor-fonte-dourado)
+}
+
 /* Responsividade Mobile para o Bottom */
 @media (max-width: 900px) {
     .footer-bottom {
