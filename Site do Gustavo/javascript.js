@@ -137,6 +137,7 @@ const translations = {
         "menu_sobre": "Sobre mim",
         "menu_trajetoria": "Trajetória",
         "menu_cursos": "Mural",
+        "menu_destaque": "Destaque",
         
         // --- HOME ---
         "ola_sou": "Olá! Sou o",
