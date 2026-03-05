@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gustavo Freitas | Portfólio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/euIOS.png" type="image/x-icon">
+</head>
+
+<body>
+  
+  <header>
+    <a href="#" class="logo">Gustavo Freitas</a>
+
+    <div id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav>
+      <a href="#home" class="nav-link active" data-lang="menu_inicial">Inicial</a>
+      <a href="#projects" class="nav-link" data-lang="menu_sobre">Sobre mim</a>
+      <a href="#trajetoria" class="nav-link" data-lang="menu_trajetoria">Trajetória</a>
+      <a href="#certificacoes" class="nav-link" data-lang="menu_cursos">Mural</a>
+      <a href="#destaque" class="nav-link" data-lang="menu_destaque">Destaque</a>
+    </nav>
+
+    <div class="language-selector">
+      <div class="selected-lang">
+        <div class="lang-flag br"></div> <span class="lang-text">PT</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+
+      <ul class="lang-options">
+        <li data-lang="pt">
+          <div class="lang-flag br"></div>
+          <span>Português</span>
+        </li>
+        <li data-lang="en">
+          <div class="lang-flag us"></div>
+          <span>English</span>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="img/main.png" alt="Gustavo Freitas Foto Principal" />
+    </div>
+    <div class="home-content">
+      <h1><strong data-lang="ola_sou" style="font-weight: 700;">Olá! Sou o</strong> <span>Gustavo Freitas</span></h1>
+
+      <h3 class="typing-text"><strong data-lang="sou" style="font-weight: 700;">Sou</strong> <span></span></h3>
+
+      <p data-lang="home_desc">Seja muito bem-vindo (a) ao meu portfólio. Aqui quero que veja um pouquinho mais sobre
+        quem eu sou, sobre minha vida acadêmica e profissional.</p>
+      
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/gustavo-freitas-8109bb201" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/GustavoFreitas2806" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://wa.me/5513988028035" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:gustavofreita2013@gmail.com?subject=Olá! Gostaria de entrar em contato com você :)" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
+      <a href="#projects" class="btn" data-lang="btn_saiba_mais">Saiba mais</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="projects-side-bar-left coluna-menor" style="background: var(--cor--gradiente)">
+      <img src="img/euIOS.png" alt="Gustavo Freitas IOS" />
+      <h1>Gustavo Freitas</h1>
+      <h2 data-lang="titulo_contatos">Contatos</h2>
+      <p><a href="https://wa.me/5513988028035" target="_blank" style="color: inherit;"><i class="fas fa-phone"></i> (13) 98802-8035</a></p>
+      <p><a href="https://www.linkedin.com/in/gustavo-freitas-8109bb201" target="_blank" style="color: inherit;"><i class="fab fa-linkedin"></i> Gustavo Freitas</a></p>
+      <p><a href="mailto:gustavofreita2013@gmail.com" style="color: inherit;"><i class="fas fa-envelope"></i> gustavofreita2013@gmail.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Santos, SP - Brasil</p>
+      <a href="Gustavo_Curriculo.pdf" download="Curriculo_Gustavo_Freitas.pdf" class="btn" style="margin-top: 8rem; width: 100%; display: flex; justify-content: center; align-items: center;" data-lang="btn_baixar_cv">Baixar CV</a>
+    </div>
+
+    <div class="projects-side-bar-right coluna-maior" style="background: var(--cor--gradiente)">
+      <h1 data-lang="quem_sou_eu">Quem eu sou?</h1>
+      <h2 class="projects-title" data-lang="conheca_mais">Conheça mais:</h2>
+      
+      <div class="projects-container">
+        
+        <div class="project-card">
+          <img src="img/alocacao-de-recursos.png" alt="Selenium" style="width: 50px">
+          <h3 class="project-title" data-lang="card_qa_titulo">Analista de Testes</h3>
+          <p class="project-desc" data-lang="card_qa_desc">Realizo testes e automações, visando garantir a qualidade do produto e atender os requisitos.</p>
+          <p class="project-tech" data-lang="tech_qa">Java · Selenium · WebDriver · JUnit</p>
+          <a href="#" class="project-link open-modal" data-modal-target="#modal" data-lang="link_saiba_mais">Saiba mais</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/pngwing.com (4).png" alt="Desenvolvedor" style="width: 50px">
+          <h3 class="project-title" data-lang="card_dev_titulo">Desenvolvedor</h3>
+          <p class="project-desc" data-lang="card_dev_desc">Desenvolvo sites e aplicativos, construindo projetos tecnológicos que agregam valor.</p>
+          <p class="project-tech" data-lang="tech_dev">Java · SpringBoot · JavaScript · MySql</p>
+          <a href="#" class="project-link open-modal" data-modal-target="#modal-dev" data-lang="link_saiba_mais">Saiba mais</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/programador.png" alt="Estudante do ADS" style="width: 50px">
+          <h3 class="project-title" data-lang="card_student_titulo">Estudante de ADS</h3>
+          <p class="project-desc" data-lang="card_student_desc">Estudo na FATEC, no último ano. Sou formado em Técnico em Desenvolvimento de Sistemas pela ETEC.</p>
+          <p class="project-tech" data-lang="tech_student">Gestão de Equipes e Projetos · Desenvolvimento</p>
+          <a href="#" class="project-link open-modal" data-modal-target="#modal-student" data-lang="link_saiba_mais">Saiba mais</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/suporte-tecnico (1).png" alt="Analista de HelpDesk" style="width: 50px">
+          <h3 class="project-title" data-lang="card_hd_titulo">Analista de HelpDesk</h3>
+          <p class="project-desc" data-lang="card_hd_desc">Trabalho atualmente respondendo chamados, garantindo a qualidade da experiência do cliente.</p>
+          <p class="project-tech" data-lang="tech_hd">Gestão de Chamados N1 · Atendimento ao Cliente</p>
+          <a href="#" class="project-link open-modal" data-modal-target="#modal-helpdesk" data-lang="link_saiba_mais">Saiba mais</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="trajetoria">
+
+    <div class="projects-side-bar-left coluna-menor" id="trajetoria-menor">
+      <h2 style="margin-bottom: 2rem;" data-lang="titulo_educacao">Educação</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - 2026</div>
+          <div class="timeline-content">
+            <h3 data-lang="edu_fatec_curso">Tecnólogo em Análise e Des. de Sistemas</h3>
+            <h4>FATEC Rubens Lara - Santos/SP</h4>
+            <p data-lang="edu_fatec_desc">
+              Ensino superior focado em Engenharia de Software, Gestão de Projetos e Programação (Java/Spring). Foram
+              realizados diversos projetos utilizando metodologias do mercado atuais, utilizando soluções existentes
+              para resolver problemas.
+            </p>
+            <div class="timeline-tags">
+              <span data-lang="tag_presencial"><b>Presencial</b></span>
+              <span>Java</span>
+              <span>Python</span>
+              <span>Scrum</span>
+              <span data-lang="tag_gestao_projetos">Gestão de Projetos</span>
+              <span>C</span>
+              <span data-lang="tag_estrutura_dados">Estrutura de Dados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022 - 2023</div>
+          <div class="timeline-content">
+            <h3 data-lang="edu_etec_curso">Técnico em Desenvolvimento de Sistemas</h3>
+            <h4>ETEC Doutora Ruth Cardoso - São Vicente/SP</h4>
+            <p data-lang="edu_etec_desc">
+              Base técnica em lógica de programação e banco de dados. No curso, foram desenvolvidos diversos projetos
+              utilizando linguagens de programação, resolvendo problemas comuns no mercado em exercícios.
+            </p>
+            <div class="timeline-tags">
+              <span data-lang="tag_presencial"><b>Presencial</b></span>
+              <span>PHP</span>
+              <span>C#</span>
+              <span>Design Digital</span>
+              <span>MySQL</span>
+              <span data-lang="tag_logica_programacao">Lógica de Programação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="academic-terminal">
+        <div class="terminal-header">
+          <div class="term-buttons">
+            <span class="term-btn close"></span>
+            <span class="term-btn min"></span>
+            <span class="term-btn max"></span>
+          </div>
+          <div class="term-title">gustavo@fatec: ~/education</div>
+        </div>
+        <div class="terminal-body">
+          <div class="term-line">
+            <span class="term-prompt">gustavo@dev:~$</span>
+            <span class="term-command">java -jar academic_status.jar</span>
+          </div>
+          <div class="term-line output">Starting Spring Boot Application...</div>
+          <div class="term-line output">[INFO] Loading modules: ETEC_Ruth_Cardoso, FATEC_Baixada_Santista</div>
+          <div class="term-line output">[INFO] Compiling latest project...</div>
+
+          <div class="term-line json">
+            <span class="json-key">"degree"</span>: <span class="json-string">"Systems Analysis and Development"</span>,
+            <span class="json-key">"status"</span>: <span class="json-string">"In Progress"</span>,
+            <span class="json-key">"active_project"</span>: <span class="json-string">"interactive_web_portfolio"</span>,
+            <span class="json-key">"focus"</span>: <span class="json-string">"Software Development"</span>
+          </div>
+
+          <div class="term-line mt-2">
+            <span class="term-prompt">gustavo@dev:~$</span> <span class="term-cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-side-bar-right coluna-maior" id="trajetoria-maior">
+      <h2 style="margin-bottom: 2rem;" data-lang="titulo_xp_profissional">Experiência Profissional</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date"><b data-lang="data_ago_atual">Ago/2025 - Atualmente</b></div>
+          <div class="timeline-content">
+            <h3 data-lang="xp_soc_analista">Analista de HelpDesk</h3>
+            <h4>SOC - Age Desenvolvimento de Sistemas</h4>
+            <p data-lang="xp_soc_analista_desc">
+              Responsável pela análise aprofundada de erros sistêmicos e validação de regras de negócio conforme
+              documentação. Atuo também na execução de testes de novas funcionalidades em dias de atualizações,
+              fornecendo feedback direto ao time de desenvolvimento e garantindo a qualidade das entregas. Realizo
+              também, treinamentos para os usuários finais do software e consultorias quando necessário.
+            </p>
+            <div class="timeline-tags">
+              <span data-lang="tag_map_erros">Mapeamento de Erros</span>
+              <span data-lang="tag_treinamento">Treinamento para Clientes</span>
+              <span data-lang="tag_testes">Testes de Software</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-lang="data_jul_24_25">Jul/2024 - Jul/2025</div>
+          <div class="timeline-content">
+            <h3 data-lang="xp_soc_assistente">Assistente de HelpDesk</h3>
+            <h4>SOC - Age Desenvolvimento de Sistemas</h4>
+            <p data-lang="xp_soc_assistente_desc">
+              Atuação focada no atendimento ao cliente e suporte na resolução de chamados. Realizei escalonamento de
+              tickets para o time de Desenvolvimento em casos de BUGs, e atualizações da documentação quando necessário.
+            </p>
+            <div class="timeline-tags">
+              <span data-lang="tag_suporte_n1">Suporte N1</span>
+              <span data-lang="tag_resolucao">Resolução de Chamados</span>
+              <span data-lang="tag_atendimento">Atendimento</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-lang="data_out_jun">Out/2023 - Jun/2024</div>
+          <div class="timeline-content">
+            <h3 data-lang="xp_soc_estagio">Estagiário - Relacionamento e Negócios</h3>
+            <h4>SOC - Age Desenvolvimento de Sistemas</h4>
+            <p data-lang="xp_soc_estagio_desc">
+              Início da jornada na empresa, com foco no aprendizado das regras de negócio e relacionamento com clientes.
+              Desenvolvimento de soft skills essenciais e entendimento do ecossistema do software SOC SST.
+            </p>
+            <div class="timeline-tags">
+              <span data-lang="tag_relacionamento">Relacionamento</span>
+              <span>Software SOC</span>
+              <span data-lang="tag_negocios">Negócios</span>
+              <span data-lang="tag_comunicacao">Comunicação e Flexibidade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h3 data-lang="xp_fortec">Auxiliar Técnico TI</h3>
+            <h4>FORTEC / FATEF</h4>
+            <p data-lang="xp_fortec_desc">
+              Suporte técnico abrangente a softwares e hardwares, incluindo manutenção de redes e equipamentos. Atuei
+              também na automatização de processos manuais, otimizando a rotina interna da instituição.
+            </p>
+            <div class="timeline-tags">
+              <span data-lang="tag_infra">Infraestrutura</span>
+              <span data-lang="tag_redes">Redes</span>
+              <span data-lang="tag_automacao">Automação</span>
+              <span>Hardware</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2022</div>
+          <div class="timeline-content">
+            <h3 data-lang="xp_btp">Aprendiz de Suporte de TI</h3>
+            <h4>Brasil Terminal Portuário (BTP)</h4>
+            <p data-lang="xp_btp_desc">
+              Primeira experiência profissional em TI. Responsável pela preparação e instalação de equipamentos
+              (computadores, coletores, rádios), gestão de usuários e suporte direto aos colaboradores.
+            </p>
+            <div class="timeline-tags">
+              <span>Hardware</span>
+              <span data-lang="tag_gestao_acessos">Gestão de Acessos</span>
+              <span data-lang="tag_suporte">Suporte Técnico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="certifications" id="certificacoes">
+
+    <div class="techfour-showcase">
+      <div class="tf-header">
+        <h3><i class="fas fa-lightbulb"></i> <span data-lang="free_titulo">Além do Código: Criatividade</span></h3>
+        <p data-lang="free_subtitulo">Trabalhos paralelos e freelances onde aplico minha visão audiovisual</p>
+      </div>
+
+      <div class="tf-cards-grid">
+        <div class="tf-card">
+          <i class="fas fa-film"></i>
+          <h4 data-lang="free_card1_titulo">Edição de Vídeo</h4>
+          <p data-lang="free_card1_desc">Criação de cortes dinâmicos, transições, tratamento de áudio e correção de cor
+            para tornar o conteúdo audiovisual mais engajador e com ritmo ideal para plataformas de vídeo.</p>
+        </div>
+
+        <div class="tf-card">
+          <i class="fas fa-palette"></i>
+          <h4 data-lang="free_card2_titulo">Design e Edição de Imagens</h4>
+          <p data-lang="free_card2_desc">Manipulação de fotos, criação de thumbnails atrativas e elaboração de peças
+            gráficas para redes sociais, utilizando conceitos de composição e teoria das cores.</p>
+        </div>
+
+        <div class="tf-card">
+          <i class="fas fa-chalkboard"></i>
+          <h4 data-lang="free_card3_titulo">Apresentações Profissionais</h4>
+          <p data-lang="free_card3_desc">Desenvolvimento de slides de alto impacto visual. Transformo dados complexos em
+            apresentações limpas, estruturadas e persuasivas para o mundo corporativo ou acadêmico.</p>
+        </div>
+
+        <div class="tf-card">
+          <i class="fas fa-video"></i>
+          <h4 data-lang="free_card4_titulo">Gravação e Produção</h4>
+          <p data-lang="free_card4_desc">Captação de material bruto com atenção aos detalhes práticos de produção:
+            iluminação adequada, enquadramento de câmera e clareza na captação de voz.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" data-lang="titulo_certificacoes_completo">Mural de Certificações e Cursos</h2>
+    <div class="carousel-container">
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+        <h3>AZ-900: Azure Fundamentals</h3>
+        <p>Microsoft</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-bug"></i></div>
+        <h3>QA: WebDriver & Selenium</h3>
+        <p>Udemy</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fab fa-java"></i></div>
+        <h3>Trilha Java</h3>
+        <p>Alura</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-users-cog"></i></div>
+        <h3>Metodologia Ágil SCRUM</h3>
+        <p>Alura</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-code"></i></div>
+        <h3>Linguagem C#</h3>
+        <p>Fundação Bradesco</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-clipboard-check"></i></div>
+        <h3>QA: Plano de Testes e Bugs</h3>
+        <p>Alura</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-file-excel"></i></div>
+        <h3>Excel Básico & Office 365</h3>
+        <p>Universidade BTP</p>
+        <span class="cert-status" data-lang="status_concluido">Concluído</span>
+      </div>
+
+    </div>
+
+    <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> <span data-lang="arraste_lado">Arraste para o lado</span>
+    </p>
+
+  </section>
+
+  <section class="bento-section" id="destaque">
+    <div class="bento-grid">
+
+      <div class="bento-item bento-img-large">
+        <div class="bento-carousel">
+          <div class="carousel-slides">
+            <div class="slide">
+              <div class="slide-blur-bg" style="background-image: url('foto-palco.jpeg');"></div>
+              <img src="img/WhatsApp Image 2026-02-19 at 18.14.08.jpeg" alt="Palco Hackathon">
+            </div>
+            <div class="slide active">
+              <div class="slide-blur-bg" style="background-image: url('foto-equipe-oracle.jpeg');"></div>
+              <img src="img/WhatsApp Image 2026-02-19 at 18.14.08 (1).jpeg" alt="Equipe na Oracle">
+            </div>
+            <div class="slide">
+              <div class="slide-blur-bg" style="background-image: url('foto-medalha.jpeg');"></div>
+              <img src="img/WhatsApp Image 2026-02-19 at 18.14.08(1).jpeg" alt="Medalha Oracle">
+            </div>
+          </div>
+
+          <div class="carousel-overlay"></div>
+
+          <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-control next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+
+          <div class="carousel-indicators">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+
+        <span data-lang="bento_tag_status" class="bento-badge">Hackathon CPS & Oracle</span>
+      </div>
+
+      <div class="bento-item bento-text-main">
+        <h3 data-lang="bento_proj_title">TechFour - Diversidade e Inclusão / 2023</h3>
+        <p data-lang="bento_proj_desc">
+          Plataforma educacional e de gestão de diversidade/inclusão corporativa. O foco do sistema é criar trilhas de
+          aprendizado, oferecer
+          transmissões ao vivo e garantir um ambiente seguro de trabalho através de um canal anônimo e relatórios de
+          desempenho.
+        </p>
+      </div>
+
+      <div class="bento-item bento-qa-box">
+        <i class="fas fa-universal-access"></i>
+        <div>
+          <h4 data-lang="bento_qa_title">Acessibilidade & Pagamentos</h4>
+          <p data-lang="bento_qa_desc">Integração nativa com VLibras e gateways do Stripe.</p>
+        </div>
+      </div>
+
+      <div class="bento-item bento-tech-stack">
+        <h4 data-lang="bento_tech_title">Tecnologias</h4>
+        <div class="bento-tech-icons">
+          <i class="fab fa-html5" title="HTML5" style="color: #e34f26;"></i>
+          <i class="fab fa-css3-alt" title="CSS3" style="color: #2965f1;"></i>
+          <i class="fab fa-js" title="JavaScript" style="color: #f7df1e;"></i>
+          <i class="fab fa-bootstrap" title="Bootstrap" style="color: #7952b3;"></i>
+        </div>
+      </div>
+
+      <div class="bento-item bento-actions">
+        <a href="#" class="bento-btn primary open-modal" data-modal-target="#modal-projeto">
+          <i class="fas fa-play"></i> <span data-lang="bento_btn_ver">Ver Projeto</span>
+        </a>
+        <a href="https://github.com/GustavoFreitas2806/Hackathnon---Oracle-CPS---TechFour-.git" target="_blank" class="bento-btn secondary">
+          <i class="fab fa-github"></i> <span data-lang="bento_btn_repo">Código Fonte</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="modal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+
+      <h1 class="modal-header-styled" data-lang="modal_qa_titulo">
+        Portfólio: Automação & QA
+      </h1>
+
+      <p class="modal-intro" data-lang="modal_qa_desc">
+        Realizo criações de testes funcionais automatizados para aplicações Web. Utilizo <strong>Java</strong> para
+        criar scripts robustos, focando em resolver problemas reais do dia-a-dia como sincronismo, localização de
+        elementos e massa de dados, garantindo um código limpo e legível quanto o da própria aplicação.
+      </p>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-toolbox"></i> <span data-lang="qa_sec_ferramentas">Ferramentas Principais</span>
+      </h3>
+
+      <div class="tech-stack-container">
+        <div class="tech-card java">
+          <i class="fab fa-java"></i>
+          <div class="tech-info">
+            <strong>Java</strong>
+            <span data-lang="qa_tech_java">Linguagem Base</span>
+          </div>
+        </div>
+
+        <div class="tech-card selenium">
+          <i class="fas fa-robot"></i>
+          <div class="tech-info">
+            <strong>Selenium</strong>
+            <span data-lang="qa_tech_selenium">WebDriver & Grid</span>
+          </div>
+        </div>
+
+        <div class="tech-card junit">
+          <i class="fas fa-check-circle"></i>
+          <div class="tech-info">
+            <strong>JUnit</strong>
+            <span data-lang="qa_tech_junit">Estrutura de Testes</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-laptop-code"></i> <span data-lang="qa_sec_competencias">Competências Desenvolvidas</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fas fa-project-diagram"></i> <span data-lang="qa_comp_fw_title">Framework & Page Objects</span></h4>
+          <p data-lang="qa_comp_fw_desc">
+            Criação de projetos do zero utilizando o padrão <strong>Page Object</strong> para organização.
+            Desenvolvimento de uma <strong>DSL (Domain Specific Language)</strong> própria para tornar os testes mais
+            enxutos, legíveis e fáceis de manter.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-sync"></i> <span data-lang="qa_comp_sync_title">Sincronismo & Elementos</span></h4>
+          <p data-lang="qa_comp_sync_desc">
+            Estratégias avançadas para localização de elementos (XPaths robustos) e interação com componentes complexos
+            como <strong>Alerts, Frames e PopUps</strong>.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-cloud"></i> <span data-lang="qa_comp_grid_title">Execução Grid & Cloud</span></h4>
+          <p data-lang="qa_comp_grid_desc">
+            Experiência na execução de testes em paralelo, sequencial ou remotamente utilizando <strong>Selenium
+              GRID</strong> e serviços de nuvem (Saucelabs), cobrindo múltiplos browsers (Firefox, Chrome, IE).
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-server"></i> <span data-lang="qa_comp_api_title">Testes de API & Exceptions</span></h4>
+          <p data-lang="qa_comp_api_desc">
+            Realização de testes de consumo de APIs, implementando tratamento rigoroso de erros com
+            <strong>Exceptions</strong> personalizadas para garantir que a falha seja identificada e tratada
+            corretamente, aumentando a resiliência da automação.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title" style="margin-top: 30px;">
+        <i class="fas fa-vial"></i> <span data-lang="qa_sec_tipos">Tipos de Testes Realizados</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fas fa-history"></i> <span data-lang="qa_type_regress_title">Testes de Regressão</span></h4>
+          <p data-lang="qa_type_regress_desc">
+            Execução de baterias de testes automatizados para garantir que novas alterações no código (deploys) não
+            quebraram funcionalidades que já estavam funcionando no sistema legado.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-box-open"></i> <span data-lang="qa_type_black_title">Testes de Caixa Preta</span></h4>
+          <p data-lang="qa_type_black_desc">
+            Validação funcional focada nas entradas e saídas (Inputs/Outputs), testando a aplicação sob a perspectiva do
+            usuário final, sem considerar a estrutura interna do código.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-code"></i> <span data-lang="qa_type_unit_title">Testes Unitários</span></h4>
+          <p data-lang="qa_type_unit_desc">
+            Utilização do framework <strong>JUnit</strong> para testar as menores unidades de código (métodos e classes)
+            de forma isolada, garantindo a lógica de programação antes da integração.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-tasks"></i> <span data-lang="qa_type_func_title">Testes Funcionais</span></h4>
+          <p data-lang="qa_type_func_desc">
+            Verificação dos requisitos de negócio e histórias de usuário, simulando a interação real (cliques,
+            preenchimentos e navegação) para assegurar que o software faz o que deve fazer.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-dev" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+
+      <h1 class="modal-header-styled" data-lang="modal_dev_titulo">
+        Portfólio: Desenvolvedor Java Full-Stack
+      </h1>
+
+      <p class="modal-intro" data-lang="modal_dev_desc">
+        Desenvolvimento Full-Stack com foco na linguagem <strong>Java</strong>. Conhecimento dos fundamentos da
+        linguagem e do paradigma de <strong>Orientação a Objetos</strong>. Capacidade de criar aplicações que consomem
+        APIs externas, manipulam estruturas de dados complexas e realizam tratamento robusto de exceções e arquivos.
+      </p>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-layer-group"></i> <span data-lang="dev_sec_stack">Stack Tecnológica</span>
+      </h3>
+
+      <div class="tech-stack-container">
+        <div class="tech-card java">
+          <i class="fab fa-java"></i>
+          <div class="tech-info">
+            <strong>Java JDK</strong>
+            <span data-lang="dev_tech_java">Linguagem Base</span>
+          </div>
+        </div>
+
+        <div class="tech-card poo">
+          <i class="fas fa-cubes"></i>
+          <div class="tech-info">
+            <strong>POO</strong>
+            <span data-lang="dev_tech_poo">Paradigma</span>
+          </div>
+        </div>
+
+        <div class="tech-card api">
+          <i class="fas fa-exchange-alt"></i>
+          <div class="tech-info">
+            <strong data-lang="dev_tech_integration">Integração</strong>
+            <span data-lang="dev_tech_api">APIs & JSON</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-code-branch"></i> <span data-lang="dev_sec_competencias">Competências Desenvolvidas</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fas fa-code"></i> <span data-lang="dev_comp_fund_title">Fundamentos & Lógica</span></h4>
+          <p data-lang="dev_comp_fund_desc">
+            Domínio da sintaxe Java, incluindo controle de fluxo (if/else), laços de repetição (loops) e manipulação de
+            variáveis, criando a base lógica para qualquer sistema back-end.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-sitemap"></i> <span data-lang="dev_comp_oo_title">Orientação a Objetos (OO)</span></h4>
+          <p data-lang="dev_comp_oo_desc">
+            Modelagem de sistemas reais utilizando <strong>Classes, Herança, Polimorfismo e Interfaces</strong>. Criação
+            de códigos organizados, reutilizáveis e fáceis de manter.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-list-ul"></i> <span data-lang="dev_comp_list_title">Collections & Listas</span></h4>
+          <p data-lang="dev_comp_list_desc">
+            Manipulação avançada de listas e coleções de dados (ArrayList, etc), permitindo gerenciar grandes volumes de
+            informações e objetos dentro da aplicação.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-shield-alt"></i> <span data-lang="dev_comp_api_title">APIs, Arquivos & Exceções</span></h4>
+          <p data-lang="dev_comp_api_desc">
+            Consumo de <strong>APIs externas</strong>, conversão de dados (Desserialização) de JSON para Objetos Java,
+            gravação de arquivos e tratamento defensivo de erros (Try/Catch/Exceptions).
+          </p>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title" style="margin-top: 30px;">
+        <i class="fas fa-laptop-code"></i> <span data-lang="dev_sec_projetos">Projetos & Atuação</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fas fa-cloud-download-alt"></i> <span data-lang="dev_proj_integ_title">Integração de Sistemas</span></h4>
+          <p data-lang="dev_proj_integ_desc">
+            Desenvolvimento de aplicação capaz de conectar-se a serviços web, buscar informações remotas (via HTTP),
+            tratar o retorno JSON e apresentar os dados formatados.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-file-code"></i> <span data-lang="dev_proj_file_title">Manipulação de Arquivos</span></h4>
+          <p data-lang="dev_proj_file_desc">
+            Implementação de funcionalidades para gerar e ler arquivos locais, permitindo a persistência de dados
+            extraídos das APIs ou gerados pelo sistema.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-project-diagram"></i> <span data-lang="dev_proj_model_title">Modelagem de Domínio</span></h4>
+          <p data-lang="dev_proj_model_desc">
+            Criação de classes que representam entidades do mundo real, aplicando regras de encapsulamento e
+            relacionamento entre objetos para garantir a integridade do sistema.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-bug"></i> <span data-lang="dev_proj_resil_title">Código Resiliente</span></h4>
+          <p data-lang="dev_proj_resil_desc">
+            Aplicação preparada para lidar com falhas. Uso de tratamento de exceções para garantir que o sistema não
+            pare de funcionar caso ocorra um erro inesperado (ex: API fora do ar).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-student" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+
+      <h1 class="modal-header-styled" data-lang="modal_student_titulo">
+        Portfólio: Estudante de ADS
+      </h1>
+
+      <p class="modal-intro" data-lang="modal_student_desc">
+        Graduando em <strong>Análise e Desenvolvimento de Sistemas</strong> pela FATEC Rubens Lara. Formação focada em
+        analisar, projetar, documentar, testar e implantar sistemas computacionais. O curso une raciocínio lógico,
+        metodologias de projetos e linguagens de programação para criar soluções robustas e seguras.
+      </p>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap;">
+        <div style="background: #f0f0f0; padding: 10px 20px; border-radius: 50px; font-weight: bold; color: #333; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-university" style="color: #B22222;"></i> <span data-lang="stu_stat_fatec">FATEC Rubens Lara</span>
+        </div>
+        <div style="background: #f0f0f0; padding: 10px 20px; border-radius: 50px; font-weight: bold; color: #333; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-clock" style="color: #333;"></i> <span data-lang="stu_stat_hours">2.800 Horas</span>
+        </div>
+        <div style="background: #f0f0f0; padding: 10px 20px; border-radius: 50px; font-weight: bold; color: #333; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-graduation-cap" style="color: var(--cor-fonte);"></i> <span data-lang="stu_stat_cycle">6º Ciclo (Final)</span>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-book-reader"></i> <span data-lang="stu_sec_pilares">Pilares da Formação</span>
+      </h3>
+
+      <div class="tech-stack-container">
+        <div class="tech-card dev-academic">
+          <i class="fas fa-code"></i>
+          <div class="tech-info">
+            <strong data-lang="stu_pilar_dev">Desenvolvimento</strong>
+            <span data-lang="stu_pilar_dev_sub">Lógica & POO</span>
+          </div>
+        </div>
+
+        <div class="tech-card eng-academic">
+          <i class="fas fa-cogs"></i>
+          <div class="tech-info">
+            <strong data-lang="stu_pilar_eng">Engenharia</strong>
+            <span data-lang="stu_pilar_eng_sub">Software & Testes</span>
+          </div>
+        </div>
+
+        <div class="tech-card mgmt-academic">
+          <i class="fas fa-users-cog"></i>
+          <div class="tech-info">
+            <strong data-lang="stu_pilar_mgmt">Gestão</strong>
+            <span data-lang="stu_pilar_mgmt_sub">Projetos & TI</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-graduation-cap"></i> <span data-lang="stu_sec_grade">Competências da Grade Curricular</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fas fa-project-diagram"></i> <span data-lang="stu_grade_eng_title">Engenharia de Software (I, II, III)</span></h4>
+          <p data-lang="stu_grade_eng_desc">
+            Ciclo completo de desenvolvimento: levantamento de requisitos, modelagem de sistemas (UML), documentação
+            técnica, padrões de projeto e metodologias ágeis (Scrum/Kanban).
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-laptop-code"></i> <span data-lang="stu_grade_prog_title">Programação & Estrutura de Dados</span></h4>
+          <p data-lang="stu_grade_prog_desc">
+            Conhecimento em Algoritmos, Estrutura de Dados (Listas, Pilhas) e Paradigma Orientado a Objetos.
+            Conhecimento específico em <strong>Programação para Mainframe</strong> e Web.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-database"></i> <span data-lang="stu_grade_db_title">Banco de Dados & Big Data</span></h4>
+          <p data-lang="stu_grade_db_desc">
+            Modelagem conceitual e lógica, linguagem SQL avançada e administração de bancos de dados. Integração com
+            conceitos de Inteligência Artificial e Ciência de Dados.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-shield-alt"></i> <span data-lang="stu_grade_infra_title">Infraestrutura & Segurança</span></h4>
+          <p data-lang="stu_grade_infra_desc">
+            Conhecimentos sólidos em Sistemas Operacionais, Redes de Computadores e <strong>Segurança da
+              Informação</strong>, garantindo a integridade e disponibilidade dos sistemas.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-briefcase"></i> <span data-lang="stu_grade_mgmt_title">Gestão de TI & Equipes</span></h4>
+          <p data-lang="stu_grade_mgmt_desc">
+            Formação em Gestão de Projetos, Gestão de Equipes, Governança de TI e Empreendedorismo. Preparo para liderar
+            times técnicos e alinhar tecnologia aos objetivos de negócio.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-language"></i> <span data-lang="stu_grade_eng_title_lang">Inglês Técnico (I ao VI)</span></h4>
+          <p data-lang="stu_grade_eng_desc_lang">
+            Seis ciclos de formação em língua inglesa focada em tecnologia, permitindo a leitura fluente de
+            documentações técnicas, manuais e comunicação em ambiente globalizado.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-helpdesk" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+
+      <h1 class="modal-header-styled" data-lang="modal_hd_titulo">
+        Portfólio: Analista de Suporte Técnico
+      </h1>
+
+      <p class="modal-intro" data-lang="modal_hd_desc">
+        Atuação analítica no suporte técnico, indo além do atendimento. Responsável pela <strong>análise de erros
+          sistêmicos</strong>, validação de regras de negócio conforme documentação e execução de testes em novas
+        funcionalidades, fornecendo feedback qualificado diretamente ao time de desenvolvimento em atualizações quando
+        necessário. Grande atuação em problemas referentes ao relacionamento com o cliente. Realização de
+        treinamentos/apresentações de módulos para os clientes.
+      </p>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-tools"></i> <span data-lang="hd_sec_tools">Ferramentas & Processos</span>
+      </h3>
+
+      <div class="tech-stack-container">
+        <div class="tech-card analysis">
+          <i class="fas fa-microscope"></i>
+          <div class="tech-info">
+            <strong data-lang="hd_tool_analise">Análise</strong>
+            <span data-lang="hd_tool_analise_sub">Erros Sistêmicos</span>
+          </div>
+        </div>
+
+        <div class="tech-card tickets">
+          <i class="fas fa-ticket-alt"></i>
+          <div class="tech-info">
+            <strong data-lang="hd_tool_chamados">Chamados</strong>
+            <span data-lang="hd_tool_chamados_sub">Escalonamento</span>
+          </div>
+        </div>
+
+        <div class="tech-card tests-support">
+          <i class="fas fa-vial"></i>
+          <div class="tech-info">
+            <strong data-lang="hd_tool_testes">Testes</strong>
+            <span data-lang="hd_tool_testes_sub">Novas Features</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="modal-section-title">
+        <i class="fas fa-headset"></i> <span data-lang="hd_sec_comp">Competências Desenvolvidas</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fas fa-search"></i> <span data-lang="hd_comp_analise_title">Análise de Erros & Regras</span></h4>
+          <p data-lang="hd_comp_analise_desc">
+            Investigação aprofundada de incidentes, validando se o comportamento do sistema está de acordo com a
+            <strong>documentação técnica</strong> e as regras de negócio estabelecidas.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-tasks"></i> <span data-lang="hd_comp_testes_title">Testes de Novas Funcionalidades</span></h4>
+          <p data-lang="hd_comp_testes_desc">
+            Atuação ativa na validação de entregas (releases), testando novas features em ambiente de
+            homologação/produção e fornecendo feedback técnico detalhado para a equipe de desenvolvimento.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-filter"></i> <span data-lang="hd_comp_triagem_title">Triagem & Escalonamento</span></h4>
+          <p data-lang="hd_comp_triagem_desc">
+            Filtro técnico dos chamados: realizo a análise prévia e testes de reprodução. O chamado só é escalonado para
+            o time de correção (Dev) com evidências claras, poupando tempo da engenharia.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-lightbulb"></i> <span data-lang="hd_comp_melhoria_title">Sugestão de Melhorias</span></h4>
+          <p data-lang="hd_comp_melhoria_desc">
+            Identificação de gargalos e dores recorrentes dos usuários, transformando essas informações em sugestões de
+            melhorias sistêmicas (Features Requests) para a equipe de produto.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-projeto" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+
+      <h1 class="modal-header-styled" data-lang="modal_proj_titulo">
+        Galeria do Projeto: Tech Four
+      </h1>
+
+      <p class="modal-intro" data-lang="modal_proj_desc">
+        Confira algumas telas reais e os detalhes da interface desenvolvida para a plataforma de diversidade e
+        inclusão.
+      </p>
+
+      <div class="modal-gallery project-gallery">
+        <img src="img/13.png" alt="Dashboard do Tech Four">
+        <img src="img/14.png" alt="Trilhas de Aprendizado">
+        <img src="img/15.png" alt="Canal de Comunicação">
+        <img src="img/16.png" alt="Home">
+      </div>
+
+      <h3 class="modal-section-title" style="margin-top: 40px;">
+        <i class="fas fa-file-download"></i> <span data-lang="proj_sec_docs">Materiais do Projeto</span>
+      </h3>
+
+      <div class="tech-stack-container">
+        <a href="Documentos/Doc_Tecnica.pdf" download="Doc_Tecnica.pdf" class="tech-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+          <i class="fas fa-file-pdf" style="color: #e74c3c !important;"></i>
+          <div class="tech-info">
+            <strong data-lang="proj_doc_tec">Doc. Técnico</strong>
+            <span data-lang="proj_doc_tec_sub">PDF - Requisitos</span>
+          </div>
+        </a>
+
+        <a href="Documentos/apostila.pdf" download="apostila.pdf" class="tech-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+          <i class="fas fa-book" style="color: #3498db !important;"></i>
+          <div class="tech-info">
+            <strong data-lang="proj_doc_apo">Apostila</strong>
+            <span data-lang="proj_doc_apo_sub">PDF - Diversidade</span>
+          </div>
+        </a>
+
+        <a href="Documentos/Diversidade e inclusão.png" download="Diversidade e inclusão.png" class="tech-card" style="text-decoration: none; color: inherit; cursor: pointer;">
+          <i class="fas fa-image" style="color: #2ecc71 !important;"></i>
+          <div class="tech-info">
+            <strong data-lang="proj_doc_pan">Panfleto</strong>
+            <span data-lang="proj_doc_pan_sub">PNG - Informativo</span>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="modal-section-title" style="margin-top: 30px;">
+        <i class="fas fa-handshake"></i> <span data-lang="proj_sec_apoio">Apoiadores do Projeto Acadêmico</span>
+      </h3>
+
+      <div class="concepts-container">
+        <div class="concept-card">
+          <h4><i class="fab fa-microsoft" style="color: #00a4ef !important;"></i> <span data-lang="proj_apoio_ms_title">Microsoft Brasil</span></h4>
+          <p data-lang="proj_apoio_ms_desc" style="margin-bottom: 20px;">
+            Projeto apoiado por <strong>Danni Mnitentag</strong>, Vice-Presidente da área de Parceiros e Canais da
+            Microsoft Brasil no momento da realização do projeto <b>acadêmico</b>, convidado para debater a
+            relevância da diversidade socialmente e no ambiente corporativo.
+          </p>
+
+          <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/52jwtCk16AY" title="Apoio Microsoft - Danni Mnitentag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="concept-card">
+          <h4><i class="fas fa-leaf" style="color: #4CAF50 !important;"></i> <span data-lang="proj_apoio_suz_title">Suzano</span></h4>
+          <p data-lang="proj_apoio_suz_desc" style="margin-bottom: 20px;">
+            Projeto apoiado por <strong>Heloisa Amurov</strong>, Líder de Diversidade e Inclusão na Suzano no
+            momento da realização do projeto <b>acadêmico</b>, convidada pela equipe para compartilhar insights
+            sobre a importância da pauta de diversidade no mundo corporativo atual.
+          </p>
+
+          <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/EQU-YNgG27w" title="Apoio Suzano - Heloisa Amurov" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="tech-footer" id="contato">
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 data-lang="footer_titulo">Vamos compilar ideias juntos?</h2>
+          <p data-lang="footer_desc">Estou sempre aberto a novas oportunidades, conexões e projetos desafiadores. Me
+            mande um ping!</p>
+
+          <a href="mailto:gustavofreita2013@gmail.com?subject=Olá! Gostaria de entrar em contato com você :)" class="api-email-btn">
+            <span class="method">POST</span>
+            <span class="endpoint">/api/v1/contact/gustavo</span>
+            <i class="fas fa-paper-plane"></i>
+          </a>
+        </div>
+
+        <div class="footer-social">
+          <h4 data-lang="footer_redes">Status_Connection:</h4>
+          <div class="social-grid">
+            <a href="https://www.linkedin.com/in/gustavo-freitas-8109bb201" target="_blank" class="social-box">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/GustavoFreitas2806" target="_blank" class="social-box">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://wa.me/5513988028035" target="_blank" class="social-box">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+
+        <div class="server-status" title="Server Monitoring">
+          <div class="pulse-dot"></div>
+          <span data-lang="footer_status">Status: 200 OK</span>
+        </div>
+
+        <div class="footer-info-right">
+          <div class="footer-code">
+            <code><span class="code-keyword">return</span> <span class="code-string">"Desenvolvido com <i class='fas fa-coffee'></i> e código em Santos, SP"</span>;</code>
+          </div>
+          <div class="footer-copy">
+            &copy; 2026 Gustavo. <span data-lang="footer_direitos">Todos os direitos reservados.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox-overlay">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="Imagem em Tela Cheia">
+  </div>
+  
+  <script src="javascript.js"></script>
+</body>
+
+</html>
